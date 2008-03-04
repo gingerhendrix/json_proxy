@@ -1,0 +1,721 @@
+GET /static/test.txt | Status: 404 | Params: {}
+GET /static/MockhiKit/Base.js | Status: 404 | Params: {}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Electrelane", :album=>"Axes", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Electrelane", :album=>"Axes", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Electrelane", :album=>"Axes", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Electrelane", :album=>"Axes", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Electrelane", :album=>"Axes", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Electrelane", :album=>"Axes", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Electrelane", :album=>"Axes", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Elliott Smith", :album=>"XO", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Electrelane", :album=>"Axes", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Elliott Smith", :album=>"XO", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Electrelane", :album=>"Axes", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Elliott Smith", :album=>"XO", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Elliott Smith", :album=>"XO", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 500 | Params: {:artist=>"Elliott Smith", :album=>"XO", :format=>"js"}
+wrong argument type Hash (expected Data):
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoding.rb:22:in `to_json'
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoding.rb:22:in `send'
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoding.rb:22:in `encode'
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoding.rb:32:in `raise_on_circular_reference'
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoding.rb:21:in `encode'
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoders/hash.rb:45:in `to_json'
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoders/hash.rb:44:in `map'
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoders/hash.rb:44:in `to_json'
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/core_ext/object/misc.rb:28:in `returning'
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoders/hash.rb:43:in `to_json'
+	./nowplaying.rb:51
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:62
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 500 | Params: {:artist=>"Elliott Smith", :album=>"XO", :format=>"js"}
+wrong argument type Hash (expected Data):
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoding.rb:22:in `to_json'
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoding.rb:22:in `send'
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoding.rb:22:in `encode'
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoding.rb:32:in `raise_on_circular_reference'
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoding.rb:21:in `encode'
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoders/hash.rb:45:in `to_json'
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoders/hash.rb:44:in `map'
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoders/hash.rb:44:in `to_json'
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/core_ext/object/misc.rb:28:in `returning'
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoders/hash.rb:43:in `to_json'
+	./nowplaying.rb:52
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:62
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 500 | Params: {:format=>"js"}
+wrong number of arguments (2 for 1):
+	/var/lib/gems/1.8/gems/json-1.1.2/lib/json/common.rb:183:in `to_json'
+	/var/lib/gems/1.8/gems/json-1.1.2/lib/json/common.rb:183:in `generate'
+	/var/lib/gems/1.8/gems/json-1.1.2/lib/json/common.rb:340:in `JSON'
+	./nowplaying.rb:28
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:62
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 500 | Params: {:artist=>"Elliott Smith", :album=>"XO", :format=>"js"}
+undefined method `[]' for #<JSON::Ext::Generator::State:0x2aaaab1a03d0>:
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoders/hash.rb:37:in `to_json'
+	/var/lib/gems/1.8/gems/json-1.1.2/lib/json/common.rb:183:in `generate'
+	/var/lib/gems/1.8/gems/json-1.1.2/lib/json/common.rb:340:in `JSON'
+	./nowplaying.rb:51
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:62
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 500 | Params: {:artist=>"Elliott Smith", :album=>"XO", :format=>"js"}
+undefined method `[]' for #<JSON::Ext::Generator::State:0x2aaaab251068>:
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoders/hash.rb:37:in `to_json'
+	/var/lib/gems/1.8/gems/json-1.1.2/lib/json/common.rb:183:in `generate'
+	./nowplaying.rb:51
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:62
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 500 | Params: {:artist=>"Elliott Smith", :album=>"XO", :format=>"js"}
+undefined method `[]' for #<JSON::Ext::Generator::State:0x2aaaab3029d0>:
+	/var/lib/gems/1.8/gems/activesupport-2.0.2/lib/active_support/json/encoders/hash.rb:37:in `to_json'
+	/var/lib/gems/1.8/gems/json-1.1.2/lib/json/common.rb:183:in `generate'
+	./nowplaying.rb:51
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:62
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Elliott Smith", :album=>"XO", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Elliott Smith", :album=>"XO", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Elliott Smith", :album=>"XO", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /similar_artists.js | Status: 500 | Params: {:artist=>"Electrelane", :format=>"js"}
+undefined method `js' for #<Array:0x2aaaab5bc090>:
+	./nowplaying.rb:64
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:62
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 500 | Params: {:artist=>"Califone", :format=>"js"}
+Name is required:
+	/var/lib/gems/1.8/gems/scrobbler-0.1.1/lib/scrobbler/album.rb:95:in `initialize'
+	./nowplaying.rb:32:in `new'
+	./nowplaying.rb:32
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:62
+GET /album_info.js | Status: 200 | Params: {:artist=>"Califone", :album=>"Deceleration Two", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 500 | Params: {:artist=>"Califone", :format=>"js"}
+Name is required:
+	/var/lib/gems/1.8/gems/scrobbler-0.1.1/lib/scrobbler/album.rb:95:in `initialize'
+	./nowplaying.rb:32:in `new'
+	./nowplaying.rb:32
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:62
+GET /album_info.js | Status: 200 | Params: {:artist=>"Califone", :album=>"Deceleration Two", :format=>"js"}
+GET /album_info.js | Status: 500 | Params: {:artist=>"Califone", :format=>"js"}
+Name is required:
+	/var/lib/gems/1.8/gems/scrobbler-0.1.1/lib/scrobbler/album.rb:95:in `initialize'
+	./nowplaying.rb:32:in `new'
+	./nowplaying.rb:32
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:62
+GET /album_info.js | Status: 500 | Params: {:artist=>"Enon", :format=>"js"}
+Name is required:
+	/var/lib/gems/1.8/gems/scrobbler-0.1.1/lib/scrobbler/album.rb:95:in `initialize'
+	./nowplaying.rb:32:in `new'
+	./nowplaying.rb:32
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:62
+GET /album_info.js | Status: 500 | Params: {:artist=>"Enon", :format=>"js"}
+Name is required:
+	/var/lib/gems/1.8/gems/scrobbler-0.1.1/lib/scrobbler/album.rb:95:in `initialize'
+	./nowplaying.rb:32:in `new'
+	./nowplaying.rb:32
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:62
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Califone", :album=>"Deceleration Two", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Califone", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 500 | Params: {:artist=>"Enon", :album=>"", :format=>"js"}
+Name is required:
+	/var/lib/gems/1.8/gems/scrobbler-0.1.1/lib/scrobbler/album.rb:95:in `initialize'
+	./nowplaying.rb:32:in `new'
+	./nowplaying.rb:32
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:62
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 500 | Params: {:artist=>"Enon", :album=>"", :format=>"js"}
+Name is required:
+	/var/lib/gems/1.8/gems/scrobbler-0.1.1/lib/scrobbler/album.rb:95:in `initialize'
+	./nowplaying.rb:32:in `new'
+	./nowplaying.rb:32
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:62
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 500 | Params: {:artist=>"Enon", :album=>"", :format=>"js"}
+Name is required:
+	/var/lib/gems/1.8/gems/scrobbler-0.1.1/lib/scrobbler/album.rb:95:in `initialize'
+	./nowplaying.rb:32:in `new'
+	./nowplaying.rb:32
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:62
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Electrelane", :format=>"js"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
+GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
+GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}

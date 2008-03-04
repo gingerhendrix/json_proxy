@@ -1,0 +1,52 @@
+#left_column {
+  float: left;
+  width: 500px;
+}
+
+#artist_info {
+  float : left;  
+}
+
+#track, #album, #artist{
+  font-family: verdana, helvetica, sans-serif;
+  float: left;
+}
+.label{
+  clear: left;
+  float: left;
+  width: 80px;
+  margin-left: 0.5em;
+}
+
+.bar{
+  background-color: #00ff00;
+  height: 10px;
+  margin-top: -10px;
+  float: right;
+  display: block;
+  min-width: 10px;
+}
+
+#album_info img{
+  float: left;
+  padding-right: 0;
+}
+
+#album_info_header {
+  float: left;      
+  margin-top: 2em;
+  margin-right: 2em;
+
+}
+
+#album_track_listing{
+  clear: both;
+}
+
+.container {
+  margin: 1em;
+  padding: 1em;
+  border: 2px solid black;   
+}
+
+
