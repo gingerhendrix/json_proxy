@@ -29,8 +29,6 @@
   }
 
   function update_album_info(album){
-    $("album_name").innerHTML = album.name;
-    $("album_artist").innerHTML = album.artist;
     $("album_reach").innerHTML = album.reach;
     $("album_image").src = album.image;
     
@@ -54,7 +52,7 @@
   function create_bar(float_value){
      var bar = document.createElement("span");
      bar.setAttribute("class", "bar");
-     bar.style.paddingRight = Math.floor( float_value*60 ) + "px";
+     bar.style.paddingRight = Math.floor( float_value*100 ) + "px";
      
       var green_component = float_value * 2;
       green_component = green_component < 1.0 ? green_component : 1.0;
@@ -82,7 +80,7 @@
 
     similar_artists.slice(0, 10).forEach(function(sim){
       similar_li = document.createElement("li");
-      similar_li.innerHTML = sim.name + "( " + sim.match + "% )";
+      similar_li.innerHTML = sim.name + " (" + sim.match + "%)";
 
       var similarity_bar = create_bar(sim.match/100);
       similar_li.appendChild(similarity_bar);
@@ -102,7 +100,7 @@
     var max_reach = top_albums[0].reach;
     top_albums.slice(0, 10).forEach(function(album){
       album_li = document.createElement("li");
-      album_li.innerHTML = album.name + "( " + Math.round(100*(album.reach/max_reach)) + "% )";
+      album_li.innerHTML = album.name + " (" + Math.round(100*(album.reach/max_reach)) + "%)";
       
       var reach_bar = create_bar((album.reach/max_reach));
       album_li.appendChild(reach_bar);

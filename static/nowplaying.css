@@ -1,10 +1,5 @@
-#left_column {
+#now_playing{
   float: left;
-  width: 500px;
-}
-
-#artist_info {
-  float : left;  
 }
 
 #track, #album, #artist{
@@ -21,13 +16,13 @@
 .bar{
   background-color: #00ff00;
   height: 10px;
-  margin-top: -10px;
-  float: right;
+  margin-top: -12px;
+  float: left;
   display: block;
   min-width: 10px;
 }
 
-#album_info img{
+#album_image {
   float: left;
   padding-right: 0;
 }
@@ -36,11 +31,23 @@
   float: left;      
   margin-top: 2em;
   margin-right: 2em;
-
+  font-size: 15px;
 }
 
 #album_track_listing{
   clear: both;
+  font-size: 12px;
+  width: 400px;
+}
+
+#similar_artists {
+  font-size: 12px;
+  float: left;
+}
+
+#top_albums{
+  font-size: 12px;
+  float: left;
 }
 
 .container {
