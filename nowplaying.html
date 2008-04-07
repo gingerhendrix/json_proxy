@@ -4,10 +4,64 @@
     <script src="/static/nowplaying.js"></script>
     
     <link rel="stylesheet" href="/static/nowplaying.css"/>
-     
+    <script>
+      var started = false;
+    
+      function updateUsername(){
+        var username = $("username").value;
+        get_recent_tracks(username);
+        if(!started){
+          started = true;
+          removeElementClass($("username"), "start");
+          addElementClass($("username"), "running");
+          removeElementClass($("left_column"), "hidden");
+        }
+      }
+      
+      window.addEventListener("load", function(){
+          removeElementClass($("username"), "start");
+          addElementClass($("username"), "running");
+          removeElementClass($("left_column"), "hidden");
+      }, false);
+      
+    </script> 
   </head>
+    <style>
+      body{
+        margin: 0px;
+      }
+    
+      .hidden {
+        display: none;
+      }
+      
+      #username_input.start {
+        text-align: center;
+        margin-top: 5em;
+      }
+      
+      #username_input.running {
+        background-color: #666666;
+        border-bottom: 2px solid #999999;
+        color: #ffffff;
+        padding-top: 4px;
+        padding-left: 1em;
+        padding-bottom: 4px;
+      }
+      
+      #username_input label {
+        margin-right: 1em;
+        font-family: verdana, helvetica, sans;
+      }
+      
+    </style>
   <body>
-   <div id="left_column">
+   <div id="username_input" >
+      <label>last.fm username</label>
+      <input type="text" id="username"></input>
+      <input type="button" onclick="updateUsername();" value="Go"></input>
+   </div>
+   <div id="left_column" class="hidden">
        <div id="now_playing" class="container">
         <h1>Now Playing</h1>
         <img id="album_image" width="130" height="130"></img>

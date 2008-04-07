@@ -1,141 +1,22 @@
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix", :jsonp=>"window.alert"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix", :jsonp=>"window.alert"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Cellar Door", :format=>"js", :artist=>"John Vanderslice"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"John Vanderslice"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"John Vanderslice"}
 GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Cellar Door", :format=>"js", :artist=>"John Vanderslice"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"John Vanderslice"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"John Vanderslice"}
 GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Cellar Door", :format=>"js", :artist=>"John Vanderslice"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"John Vanderslice"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"John Vanderslice"}
 GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET / | Status: 200 | Params: {:format=>"html"}
-GET /recent_tracks.js | Status: 200 | Params: {:format=>"js"}
-GET /album_info.js | Status: 200 | Params: {:artist=>"Enon", :album=>"Hocus-Pocus", :format=>"js"}
-GET /top_albums.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
-GET /similar_artists.js | Status: 200 | Params: {:artist=>"Enon", :format=>"js"}
+GET /favicon.ico | Status: 404 | Params: {}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"The Milk-Eyed Mender", :format=>"js", :artist=>"Joanna Newsom"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Joanna Newsom"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Joanna Newsom"}

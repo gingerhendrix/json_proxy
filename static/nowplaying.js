@@ -1,11 +1,11 @@
-(function(){
 
   var $ = function(id){ return document.getElementById(id) };
 
   var now_playing;
 
-  function get_recent_tracks(){
-    var d = loadJSONDoc("/recent_tracks.js");
+  function get_recent_tracks(username){
+    alert("Username: " + username);
+    var d = loadJSONDoc("/audioscrobbler/recent_tracks.js", {username : username});
     d.addCallback(update_recent_tracks);
     return d;
   }
@@ -23,14 +23,14 @@
 
 
   function get_album_info(artist, album){
-    var d = loadJSONDoc("/album_info.js", {artist: artist, album : album});
+    var d = loadJSONDoc("/audioscrobbler/album_info.js", {artist: artist, album : album});
     d.addCallback(update_album_info);
     return d;
   }
 
   function update_album_info(album){
     $("album_reach").innerHTML = album.reach;
-    $("album_image").src = album.image;
+    $("album_image").src = album.image_small;
     
     $("album_track_listing").innerHTML = "";
     
@@ -67,10 +67,10 @@
 
 
 
-  window.addEventListener("load", get_recent_tracks, false);
+
 
   function get_similar_artists(artist){
-    var d = loadJSONDoc("/similar_artists.js", {artist: artist});
+    var d = loadJSONDoc("/audioscrobbler/similar_artists.js", {artist: artist});
     d.addCallback(update_similar_artists);
     return d;
   }
@@ -90,7 +90,7 @@
   }
 
   function get_top_albums(artist){
-    var d = loadJSONDoc("/top_albums.js", {artist: artist});
+    var d = loadJSONDoc("/audioscrobbler/top_albums.js", {artist: artist});
     d.addCallback(update_top_albums);
     return d;
   }
@@ -110,4 +110,3 @@
     });
   }; 
 
-})();
