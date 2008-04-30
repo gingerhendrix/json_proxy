@@ -1,15 +1,36 @@
 <html>
   <head>
     <script src="/static/MochiKit/MochiKit.js"></script>
-    <script src="/static/nowplaying.js"></script>
     
+    <script src="/static/NowPlaying/utils/databean.js"></script>
+    <script src="/static/NowPlaying/data/now_playing_datasource.js"></script>
+    <script src="/static/NowPlaying/data/top_albums_datasource.js"></script>
+ 
+    <script src="/static/NowPlaying/ui/now_playing_panel.js"></script>
+    <script src="/static/NowPlaying/ui/top_albums_panel.js"></script>
+    
+    <script src="/static/MochiKit/MochiKit.js"></script>
     <link rel="stylesheet" href="/static/nowplaying.css"/>
     <script>
       var started = false;
     
       function updateUsername(){
         var username = $("username").value;
-        get_recent_tracks(username);
+        //get_recent_tracks(username);
+        
+        var npData = new NowPlayingDatasource(username);
+        var npUI = new NowPlayingPanel($("now_playing"), npData);
+        
+        var taData = new TopAlbumsDatasource();
+        npData.connect("artist", function(artist){
+          taData.artist = artist;
+          taData.update();
+        });
+        
+        var taUI = new TopAlbumsPanel($("top_albums_list"), taData);
+        
+        npData.update();
+        
         if(!started){
           started = true;
           removeElementClass($("username"), "start");
@@ -66,10 +87,10 @@
         <h1>Now Playing</h1>
         <img id="album_image" width="130" height="130"></img>
         <div id="album_info_header">
-          <span class="label">Track</span> <span id="track"></span><br/>
-          <span class="label">Album</span> <span id="album"></span><br/>
-          <span class="label">Artist</span> <span id="artist"></span><br/>
-          <span class="label">Reach</span> <span id="album_reach"></span><br/>
+          <span class="label">Track</span> <span id="track" class="track"></span><br/>
+          <span class="label">Album</span> <span id="album" class="album"></span><br/>
+          <span class="label">Artist</span> <span id="artist" class="artist"></span><br/>
+          <span class="label">Reach</span> <span id="album_reach" class="album_reach"></span><br/>
         </div>
         <br style="clear: both" />
 

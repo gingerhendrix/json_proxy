@@ -2,7 +2,23 @@
   var $ = function(id){ return document.getElementById(id) };
 
   var now_playing;
-
+  
+  //
+  // TODO
+  //
+  // Refactor into separate UI and data classes connect with events mechanism
+  // i.e. MochiKit.Signal.
+  // 
+  // UI:
+  //   Nowplaying: Connects to nowplaying and album_info (for reach+picture) 
+  //   TopAlbums: Connects to top albums
+  //   Similar Artists: Connects to similar artists
+  // Data:
+  //   Nowplaying: connects to username + timed
+  //   Album Info: Connects to now playing (only when album changes)
+  //   Top Albums: Connects to now playing (only when artist changes)
+  //   Similar Artists: Connects to now playing (only when artist changes)
+  
   function get_recent_tracks(username){
     alert("Username: " + username);
     var d = loadJSONDoc("/audioscrobbler/recent_tracks.js", {username : username});
@@ -13,10 +29,16 @@
   function update_recent_tracks(recent_tracks){
     now_playing = recent_tracks[0];
     $("track").innerHTML = now_playing.name;
-    $("album").innerHTML = now_playing.album;
+
     $("artist").innerHTML = now_playing.artist;
+
+    if(now_playing.album ){
+        $("album").innerHTML = now_playing.album;
+        get_album_info(now_playing.artist, now_playing.album);
+    }else{
+        $("album").innerHTML = "<i>unknown</i>";
+    }
     
-    get_album_info(now_playing.artist, now_playing.album);
     get_similar_artists(now_playing.artist);
     get_top_albums(now_playing.artist);
   };
