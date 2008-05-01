@@ -1,5 +1,5 @@
 
-function ArtistInfoDataSource(artist, album){
+function AlbumInfoDatasource(artist, album){
   this.artist = artist;
   this.album = album;
   
@@ -8,7 +8,7 @@ function ArtistInfoDataSource(artist, album){
   this.makeProp("album_track_listing");
   
   this.update = function(){
-    var d = loadJSONDoc("/audioscrobbler/artist_info.js", {artist : artist, album : album});
+    var d = loadJSONDoc("/audioscrobbler/album_info.js", {artist : this.artist, album : this.album});
     d.addCallback(bind(this.onUpdate, this));
     return d
   }
@@ -20,3 +20,5 @@ function ArtistInfoDataSource(artist, album){
   }
 
 }
+
+AlbumInfoDatasource.prototype = new DataBean();

@@ -1,4 +1,4 @@
-
+    
 function NowPlayingPanel(element, datasource){
 
   this.onTrackChange = function(track){
@@ -16,8 +16,20 @@ function NowPlayingPanel(element, datasource){
     artistEl.innerHTML = track;
   }
   
+  this.onImageChange = function(image){
+    var imageEl = MochiKit.DOM.getElementsByTagAndClassName("img", "album_image", element)[0];
+    imageEl.src = image;
+  }
+  
+  this.onReachChange = function(reach){
+    var reachEl = MochiKit.DOM.getElementsByTagAndClassName("span", "album_reach", element)[0];
+    reachEl.innerHTML = reach;
+  }
+
+  
   datasource.connect("track", this, "onTrackChange");
   datasource.connect("album", this, "onAlbumChange");
   datasource.connect("artist", this, "onArtistChange");
-  
+  datasource.connect("image", this, "onImageChange");
+  datasource.connect("reach", this, "onReachChange");
 }

@@ -3,11 +3,18 @@
     <script src="/static/MochiKit/MochiKit.js"></script>
     
     <script src="/static/NowPlaying/utils/databean.js"></script>
+
+    <script src="/static/NowPlaying/data/recent_tracks_datasource.js"></script>
+    <script src="/static/NowPlaying/data/album_info_datasource.js"></script>
     <script src="/static/NowPlaying/data/now_playing_datasource.js"></script>
     <script src="/static/NowPlaying/data/top_albums_datasource.js"></script>
- 
+    <script src="/static/NowPlaying/data/similar_artists_datasource.js"></script>
+
+    <script src="/static/NowPlaying/ui/bar_chart.js"></script>
+     
     <script src="/static/NowPlaying/ui/now_playing_panel.js"></script>
     <script src="/static/NowPlaying/ui/top_albums_panel.js"></script>
+    <script src="/static/NowPlaying/ui/similar_artists_panel.js"></script>
     
     <script src="/static/MochiKit/MochiKit.js"></script>
     <link rel="stylesheet" href="/static/nowplaying.css"/>
@@ -18,8 +25,11 @@
         var username = $("username").value;
         //get_recent_tracks(username);
         
-        var npData = new NowPlayingDatasource(username);
-        var npUI = new NowPlayingPanel($("now_playing"), npData);
+
+        var rtData = new RecentTracksDatasource(username);
+        var aiData = new AlbumInfoDatasource();
+        
+        var npData = new NowPlayingDatasource(rtData, aiData);
         
         var taData = new TopAlbumsDatasource();
         npData.connect("artist", function(artist){
@@ -27,9 +37,18 @@
           taData.update();
         });
         
-        var taUI = new TopAlbumsPanel($("top_albums_list"), taData);
+        var saData = new SimilarArtistsDatasource();
+        npData.connect("artist", function(artist){
+          saData.artist = artist;
+          saData.update();
+        });
+
+        rtData.update();
         
-        npData.update();
+        var npUI = new NowPlayingPanel($("now_playing"), npData);        
+        var taUI = new TopAlbumsPanel($("top_albums_list"), taData);
+        var saUI = new SimilarArtistsPanel($("similar_artists_list"), saData);
+
         
         if(!started){
           started = true;
@@ -85,7 +104,7 @@
    <div id="left_column" class="hidden">
        <div id="now_playing" class="container">
         <h1>Now Playing</h1>
-        <img id="album_image" width="130" height="130"></img>
+        <img id="album_image" class="album_image" width="130" height="130"></img>
         <div id="album_info_header">
           <span class="label">Track</span> <span id="track" class="track"></span><br/>
           <span class="label">Album</span> <span id="album" class="album"></span><br/>
