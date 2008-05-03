@@ -1,11 +1,39 @@
 #now_playing{
+  padding-left: 2em;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #aaaaaa;
+}
+
+#now_playing h1 {
   float: left;
 }
 
-#track, #album, #artist{
-  font-family: verdana, helvetica, sans-serif;
+.now_playing_body {
   float: left;
+  padding-left: 2em;
 }
+
+.now_playing_body .track{
+  font-family: verdana, helvetica, sans-serif;
+  font-size: 22pt;
+}
+
+.now_playing_body .artist, .now_playing_body .by{
+ font-family: verdana, helvetica, sans-serif;
+ font-size: 18pt;
+}
+
+.now_playing_body .album_title{
+ font-family: verdana, helvetica, sans-serif;
+ font-size: 14pt;
+}
+
+.now_playing_body .album{
+  font-family: verdana, helvetica, sans-serif;
+  font-size: 16pt;
+}
+
 .label{
   clear: left;
   float: left;
@@ -55,11 +83,17 @@
 #similar_artists {
   font-size: 12px;
   float: left;
+  width: 35%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 #top_albums{
   font-size: 12px;
   float: left;
+  width: 35%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .container {
@@ -69,3 +103,24 @@
 }
 
 
+#artist_info{
+  width: 40%;
+  float: left;  
+}
+
+#album_info{
+  width: 40%;
+  float: left;  
+}
+
+#album_info .album_image{
+  float: left;
+  vertical-align: center;
+}
+
+#album_info .track_listing{
+  margin-left: 20px;
+  float: left;
+  vertical-align: center;
+
+}

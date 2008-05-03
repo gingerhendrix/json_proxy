@@ -79,10 +79,6 @@
       input[type='text']{
         padding-left: 0.5em;
       }
-      #username_input label {
-        margin-right: 1em;
-        font-family: verdana, helvetica, sans;
-      }
       
       #start{
         width: 100%;
@@ -133,20 +129,25 @@
       <input type="button" onclick="updateUsername($('username').value);" value="Go"></input>
    </div>
 
-    <div id="now_playing" class="container">
-        <h1>Now Playing</h1>
-        <img id="album_image" class="album_image" width="130" height="130"></img>
-        <div id="album_info_header">
-          <span class="label">Track</span> <span id="track" class="track"></span><br/>
-          <span class="label">Album</span> <span id="album" class="album"></span><br/>
-          <span class="label">Artist</span> <span id="artist" class="artist"></span><br/>
-          <span class="label">Reach</span> <span id="album_reach" class="album_reach"></span><br/>
+    <div id="now_playing">
+      <h1>Now Playing</h1>
+      <div class="now_playing_body">
+        <span class="track"></span>
+        <span class="by"> - </span>
+        <span class="artist"></span>
+        <div class="album_body">
+          <span class="album_title">From the album</span>
+          <span class="album"></span>
         </div>
-        <br style="clear: both" />
+       </div>
+     <br style="clear: both"/>
+     </div>
 
-        <div id="album_track_listing">
+     <div id="artist_info" class="container">   
+        <h2><span class="artist">Sonic Youth</span></h2>
+        <div class="info">
+        <p>Sonic Youth is a seminal alternative rock band from the United States of America, formed in New York City in 1981. Current personnel are founding members Thurston Moore (vocals and guitar), Lee Ranaldo (vocals and guitar), Kim Gordon (bass guitar, guitar and vocals), Mark Ibold (bass guitar), and Steve Shelley (drums).</p>
         </div>
-        
         <div id="top_albums" class="container">
           <h2>Top Albums</h2>
           <ol id="top_albums_list">
@@ -158,6 +159,19 @@
           <ol id="similar_artists_list">
           </ol>
         </div>
+        <br style="clear: both"/>
+    </div>
+    
+    <div id="album_info" class="container">
+       <h2><span class="album">Daydream Nation</span></h2>
+       <img class="album_image" width="130" height="130"></img>
+       <div class="track_listing">
+           <ol id="track_listing_list">
+            <li></li>
+            <li></li>
+            <li></li>
+           </ol>
+       </div>
     </div>
   </div> 
  

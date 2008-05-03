@@ -207,3 +207,213 @@ GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :us
 GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
 GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
 GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Daydream Nation", :format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /static/NowPlaying/data/now_playing_datasource.js | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
