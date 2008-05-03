@@ -20,12 +20,14 @@
     <link rel="stylesheet" href="/static/nowplaying.css"/>
     <script>
       var started = false;
-    
-      function updateUsername(){
-        var username = $("username").value;
-        //get_recent_tracks(username);
-        
-
+      
+      function updateUsername(username){
+        if(!started){
+          showMain(); 
+        }
+        $("username").value = username;
+        window.location.hash = "#" + username;
+  
         var rtData = new RecentTracksDatasource(username);
         var aiData = new AlbumInfoDatasource();
         
@@ -48,20 +50,24 @@
         var npUI = new NowPlayingPanel($("now_playing"), npData);        
         var taUI = new TopAlbumsPanel($("top_albums_list"), taData);
         var saUI = new SimilarArtistsPanel($("similar_artists_list"), saData);
-
-        
-        if(!started){
-          started = true;
-          removeElementClass($("username"), "start");
-          addElementClass($("username"), "running");
-          removeElementClass($("left_column"), "hidden");
-        }
+      }
+      
+      function showStart(){
+        $('main').style.display = "none";
+        $('start').style.display = "block";
+      }
+      
+      function showMain(){
+       $('start').style.display = "none";
+       $('main').style.display = "block";
       }
       
       window.addEventListener("load", function(){
-          removeElementClass($("username"), "start");
-          addElementClass($("username"), "running");
-          removeElementClass($("left_column"), "hidden");
+         if(window.location.hash.length > 1){
+            updateUsername(window.location.hash.substring(1));
+         }else{
+          showStart();
+         }
       }, false);
       
     </script> 
@@ -70,39 +76,64 @@
       body{
         margin: 0px;
       }
-    
-      .hidden {
-        display: none;
+      input[type='text']{
+        padding-left: 0.5em;
       }
-      
-      #username_input.start {
-        text-align: center;
-        margin-top: 5em;
-      }
-      
-      #username_input.running {
-        background-color: #666666;
-        border-bottom: 2px solid #999999;
-        color: #ffffff;
-        padding-top: 4px;
-        padding-left: 1em;
-        padding-bottom: 4px;
-      }
-      
       #username_input label {
         margin-right: 1em;
         font-family: verdana, helvetica, sans;
       }
       
+      #start{
+        width: 100%;
+        text-align: center;
+        padding-top: 10%;
+        height: 100%;
+        background-color: #3333aa;      
+      }
+      
+      #start label{
+        font-family: helvetica;
+        font-weight: normal;
+        font-size: 24pt;
+        padding-right: 0.5em;
+        color: #000000;
+      }
+      
+      #start input{
+        font-family: tahoma, times, serif;
+        font-weight: normal;
+        font-size: 24pt;
+      }
+      
+      #start_username{
+        padding-left: 0.5em;
+        color: #D01F3C;
+      }
+      #start input.button{
+        margin-left: 0.5em;
+      }
+      
+      
     </style>
   <body>
+    <div id="start" style="display: none">
+       <div class="username_input" >
+          <label>last.fm username</label>
+          <input type="text" id="start_username"></input>
+          <input class="button" type="button" onclick="updateUsername($('start_username').value);" value="Go"></input>  
+       </div>
+    </div>
+
+  <div id="main" style="display: none">
+    
    <div id="username_input" >
       <label>last.fm username</label>
       <input type="text" id="username"></input>
-      <input type="button" onclick="updateUsername();" value="Go"></input>
+      <input type="button" onclick="updateUsername($('username').value);" value="Go"></input>
    </div>
-   <div id="left_column" class="hidden">
-       <div id="now_playing" class="container">
+
+    <div id="now_playing" class="container">
         <h1>Now Playing</h1>
         <img id="album_image" class="album_image" width="130" height="130"></img>
         <div id="album_info_header">
@@ -127,12 +158,8 @@
           <ol id="similar_artists_list">
           </ol>
         </div>
-
-     <br style="clear: both" />
-     </div>
-
-  </div>
- 
+    </div>
+  </div> 
  
   </body>
   

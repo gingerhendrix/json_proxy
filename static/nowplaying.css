@@ -22,6 +22,18 @@
   min-width: 10px;
 }
 
+#username_input{
+  padding-left: 20px;
+  background-color: #cccccc;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+#username_input label 
+{
+  margin-right: 1em;
+  font-family: verdana, helvetica, sans;
+}
+      
 #album_image {
   float: left;
   padding-right: 0;
