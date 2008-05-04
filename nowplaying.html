@@ -37,6 +37,9 @@
         var UI = NowPlaying.ui;
         
         var rtData = new Data.RecentTracksDatasource(username);
+        var updateTimer = window.setInterval(function(){
+            rtData.update();
+        }, 30000);
         
         var npData = new Data.NowPlayingDatasource(rtData);
         

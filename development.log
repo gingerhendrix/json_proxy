@@ -795,3 +795,96 @@ GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :us
 GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
 GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Music Has the Right to Children", :format=>"js", :artist=>"Boards of Canada"}
 GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Bill Callahan"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Bill Callahan"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Smog"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"A River Ain't Too Much to Love", :format=>"js", :artist=>"Smog"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Smog"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Smog"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"A River Ain't Too Much to Love", :format=>"js", :artist=>"Smog"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Smog"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}

@@ -3,8 +3,11 @@ Utils.namespace("NowPlaying.ui", {
     this.element = element;
     
     this.linkHtml(datasource, "album", "album");
+      function log(a, n){
+        return Math.log(a)/Math.log(n);
+      }
     this.link(datasource, "reach", "reach", function(el, val){
-      el.innerHTML = (Math.log(val) / Math.log(500000)).toFixed(1) ;
+      el.innerHTML = val;
     });
     this.linkImage(datasource, "image", "album_image");    
     this.link(datasource, "track_listing", "track_listing_list", function(el, val){
