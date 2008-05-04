@@ -1,11 +1,12 @@
+Utils.namespace("NowPlaying.ui", {    
+  NowPlayingPanel : function(element, datasource){
+    this.element = element;
     
-function NowPlayingPanel(element, datasource){
-  this.element = element;
-  
-  this.linkHtml(datasource, "track", "track");
-  this.linkHtml(datasource, "album", "album");
-  this.linkHtml(datasource, "artist", "artist");
-  
-}
+    this.linkHtml(datasource, "track", "track");
+    this.linkHtml(datasource, "album", "album");
+    this.linkHtml(datasource, "artist", "artist");
+    
+  }
+});
 
-NowPlayingPanel.prototype = new DataPanel();
+NowPlaying.ui.NowPlayingPanel.prototype = new NowPlaying.ui.DataPanel();

@@ -113,14 +113,30 @@
   float: left;  
 }
 
-#album_info .album_image{
-  float: left;
-  vertical-align: center;
+#album_info .left_column{
+ float: left;
+ vertical-align: center;
+ text-align:center;
+ width: 150px; 
 }
 
 #album_info .track_listing{
   margin-left: 20px;
   float: left;
   vertical-align: center;
+}
 
+#album_info .reach_container{
+  width: 130px;
+  text-align: center;
+  border: 1px solid black;
+  padding-bottom: 0.5em;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+#album_info .reach_container .reach{
+  font-family: verdana, helvetica, sans;
+  display: block;
 }

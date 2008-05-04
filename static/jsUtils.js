@@ -2,7 +2,7 @@
 (function(){
 
     var _savedNamespaces = {}
-  _savedNamespaces["Utils"] = Utils;
+  //_savedNamespaces["Utils"] = Utils;
   Utils = {};
 
   function getNamespace(nameParts){

@@ -417,3 +417,381 @@ GET / | Status: 200 | Params: {:format=>"html"}
 GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
 GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
 GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Sonic Youth"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /static/NowPlaying/data/audioscrobller/album_info_datasource.js | Status: 404 | Params: {}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Drum's Not Dead", :format=>"js", :artist=>"Liars"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /static/NowPlaying/data/audioscrobller/album_info_datasource.js | Status: 404 | Params: {}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /static/NowPlaying/data/audioscrobller/album_info_datasource.js | Status: 404 | Params: {}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /static/NowPlaying/data/audioscrobller/album_info_datasource.js | Status: 404 | Params: {}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /static/NowPlaying/data/audioscrobller/album_info_datasource.js | Status: 404 | Params: {}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /static/NowPlaying/data/audioscrobller/album_info_datasource.js | Status: 404 | Params: {}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /static/NowPlaying/data/audioscrobller/album_info_datasource.js | Status: 404 | Params: {}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/album_info.js | Status: 500 | Params: {:format=>"js"}
+Artist is required:
+	./vendor/gems/scrobbler-0.1.1/lib/scrobbler/album.rb:94:in `initialize'
+	/home/ga/workspace/nowplaying/lib/audioscrobbler/routes.rb:14:in `new'
+	/home/ga/workspace/nowplaying/lib/audioscrobbler/routes.rb:14
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:23
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/album_info.js | Status: 500 | Params: {:format=>"js"}
+Artist is required:
+	./vendor/gems/scrobbler-0.1.1/lib/scrobbler/album.rb:94:in `initialize'
+	/home/ga/workspace/nowplaying/lib/audioscrobbler/routes.rb:14:in `new'
+	/home/ga/workspace/nowplaying/lib/audioscrobbler/routes.rb:14
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:23
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/album_info.js | Status: 500 | Params: {:format=>"js"}
+Artist is required:
+	./vendor/gems/scrobbler-0.1.1/lib/scrobbler/album.rb:94:in `initialize'
+	/home/ga/workspace/nowplaying/lib/audioscrobbler/routes.rb:14:in `new'
+	/home/ga/workspace/nowplaying/lib/audioscrobbler/routes.rb:14
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:23
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/album_info.js | Status: 500 | Params: {:format=>"js"}
+Artist is required:
+	./vendor/gems/scrobbler-0.1.1/lib/scrobbler/album.rb:94:in `initialize'
+	/home/ga/workspace/nowplaying/lib/audioscrobbler/routes.rb:14:in `new'
+	/home/ga/workspace/nowplaying/lib/audioscrobbler/routes.rb:14
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:23
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/album_info.js | Status: 500 | Params: {:format=>"js"}
+Artist is required:
+	./vendor/gems/scrobbler-0.1.1/lib/scrobbler/album.rb:94:in `initialize'
+	/home/ga/workspace/nowplaying/lib/audioscrobbler/routes.rb:14:in `new'
+	/home/ga/workspace/nowplaying/lib/audioscrobbler/routes.rb:14
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:23
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Liars"}
+GET /audioscrobbler/album_info.js | Status: 500 | Params: {:format=>"js"}
+Artist is required:
+	./vendor/gems/scrobbler-0.1.1/lib/scrobbler/album.rb:94:in `initialize'
+	/home/ga/workspace/nowplaying/lib/audioscrobbler/routes.rb:14:in `new'
+	/home/ga/workspace/nowplaying/lib/audioscrobbler/routes.rb:14
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `instance_eval'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:94:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:124:in `run_safely'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/event.rb:87:in `attend'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/dispatcher.rb:21:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/session/cookie.rb:32:in `call'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/sessions.rb:17:in `call'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:39:in `process'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+	/var/lib/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+	/var/lib/gems/1.8/gems/rack-0.2.0/lib/rack/handler/mongrel.rb:12:in `run'
+	/home/ga/workspace/nowplaying/vendor/gems/sinatra-0.1.7/lib/sinatra/server.rb:13:in `start'
+	./vendor/gems/sinatra-0.1.7/lib/sinatra.rb:48
+	nowplaying.rb:23
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Boc Maxima", :format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Boc Maxima", :format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Twoism", :format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Twoism", :format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Twoism", :format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Twoism", :format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Twoism", :format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Twoism", :format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Twoism", :format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"In Rainbows", :format=>"js", :artist=>"Radiohead"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Twoism", :format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Twoism", :format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Twoism", :format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Twoism", :format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Twoism", :format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Twoism", :format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Twoism", :format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Twoism", :format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Twoism", :format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Music Has the Right to Children", :format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Music Has the Right to Children", :format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"In Rainbows", :format=>"js", :artist=>"Radiohead"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Music Has the Right to Children", :format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Music Has the Right to Children", :format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Music Has the Right to Children", :format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Music Has the Right to Children", :format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Music Has the Right to Children", :format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Music Has the Right to Children", :format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET / | Status: 200 | Params: {:format=>"html"}
+GET /audioscrobbler/recent_tracks.js | Status: 200 | Params: {:format=>"js", :username=>"gingerhendrix"}
+GET /audioscrobbler/top_albums.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/album_info.js | Status: 200 | Params: {:album=>"Music Has the Right to Children", :format=>"js", :artist=>"Boards of Canada"}
+GET /audioscrobbler/similar_artists.js | Status: 200 | Params: {:format=>"js", :artist=>"Boards of Canada"}
