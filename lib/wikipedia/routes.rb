@@ -4,9 +4,9 @@ module NowPlaying
   module Wikipedia
     module Routes
       
-      get '/wikipedia/artist.js' do
-
-        doc = Hpricot open('http://en.wikipedia.org/wiki/Tori_Amos')
+      get '/wikipedia/content.js' do
+        url = params[:url]
+        doc = Hpricot open(url)
 
         para = (doc/'#bodyContent p').first 
 
@@ -27,7 +27,7 @@ module NowPlaying
           end
         end
         
-        content.to_html
+         json_p :innerHTML => content.to_html 
       end 
       
     end

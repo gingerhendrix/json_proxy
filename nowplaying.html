@@ -9,9 +9,13 @@
     <script src="/static/NowPlaying/data/audioscrobbler/album_info_datasource.js"></script>
     <script src="/static/NowPlaying/data/audioscrobbler/top_albums_datasource.js"></script>
     <script src="/static/NowPlaying/data/audioscrobbler/similar_artists_datasource.js"></script>
+    
+    <script src="/static/NowPlaying/data/musicbrainz/artist_urls_datasource.js"></script>
+    <script src="/static/NowPlaying/data/wikipedia/wikipedia_datasource.js"></script>
 
     <script src="/static/NowPlaying/data/now_playing_datasource.js"></script>
     <script src="/static/NowPlaying/data/album_info_datasource.js"></script>
+    <script src="/static/NowPlaying/data/artist_info_datasource.js"></script>
 
     <script src="/static/NowPlaying/ui/bar_chart.js"></script>
 
@@ -20,6 +24,7 @@
     <script src="/static/NowPlaying/ui/top_albums_panel.js"></script>
     <script src="/static/NowPlaying/ui/similar_artists_panel.js"></script>
     <script src="/static/NowPlaying/ui/album_info_panel.js"></script>
+    <script src="/static/NowPlaying/ui/artist_info_panel.js"></script>
     
     <script src="/static/MochiKit/MochiKit.js"></script>
     <link rel="stylesheet" href="/static/nowplaying.css"/>
@@ -35,6 +40,9 @@
         window.location.hash = "#" + username;
         var Data = NowPlaying.data;
         var AS = NowPlaying.data.audioscrobbler;
+        var MB = NowPlaying.data.musicbrainz;
+        var WP = NowPlaying.data.wikipedia;
+        
         var UI = NowPlaying.ui;
         
         var rtData = new Data.RecentTracksDatasource(username);
@@ -66,13 +74,18 @@
           saData.artist = artist;
           saData.update();
         });
-
+        
         rtData.update();
         
         var npUI = new UI.NowPlayingPanel($("now_playing"), npData);        
         var taUI = new UI.TopAlbumsPanel($("top_albums_list"), taData);
         var saUI = new UI.SimilarArtistsPanel($("similar_artists_list"), saData);
-        var aiUI = new UI.AlbumInfoPanel($("album_info"), new Data.AlbumInfoDatasource(npData, aiData));
+        var albumUI = new UI.AlbumInfoPanel($("album_info"), new Data.AlbumInfoDatasource(npData, aiData));
+        var artistUI = new UI.ArtistInfoPanel($("artist_info"), 
+                                              new Data.ArtistInfoDatasource(npData,  
+                                                                            new MB.ArtistUrlsDatasource(),
+                                                                            new WP.WikipediaDatasource())
+                                             );
       }
       
       function showStart(){
@@ -168,9 +181,10 @@
 
      <div id="artist_info" class="container">   
         <h2><span class="artist">Sonic Youth</span></h2>
-        <div class="info">
-        <p>Sonic Youth is a seminal alternative rock band from the United States of America, formed in New York City in 1981. Current personnel are founding members Thurston Moore (vocals and guitar), Lee Ranaldo (vocals and guitar), Kim Gordon (bass guitar, guitar and vocals), Mark Ibold (bass guitar), and Steve Shelley (drums).</p>
+
+        <div class="wikipedia_content">
         </div>
+        <a href="#" class="wikipedia_url">Wikipedia</a>
         <div id="top_albums" class="container">
           <h2>Top Albums</h2>
           <ol id="top_albums_list">
