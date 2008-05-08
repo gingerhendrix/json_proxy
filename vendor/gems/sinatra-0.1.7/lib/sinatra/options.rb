@@ -30,12 +30,17 @@ module Sinatra
         opts.on '-X', '--mutex', 'Use mutex lock when attending events' do
           @use_mutex = true
         end
+        opts.on '-l log', '--log log', "Use log file" do |log|
+          @log_file = log
+        end
       end.parse!(ARGV)
     end
     
     def log_file
       # TODO find a better way that this
-      if File.basename($0, '.rb') == 'rake_test_loader'  # hack to satisfy rake
+      if @log_file 
+        @log_file
+      elsif File.basename($0, '.rb') == 'rake_test_loader'  # hack to satisfy rake
         '%s.log' % environment
       else
         File.dirname($0) + ('/%s.log' % environment)
