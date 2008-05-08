@@ -5,6 +5,9 @@ require File.dirname(__FILE__) + '/vendor/gems/scrobbler-0.1.1/lib/scrobbler.rb'
 require 'rbrainz'
 require 'hpricot'
 require 'open-uri'
+require 'fileutils'
+
+FileUtils.cd File.dirname(__FILE__)
 
 Sinatra::Loader.load_files File.dirname(__FILE__) + "/lib/utils/jsonp_renderer.rb"
 
