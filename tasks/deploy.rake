@@ -42,12 +42,23 @@ begin
       #run "mkdir -p #{rel_dir}"
       run "svn export #{SVN_REPO} #{rel_dir}"
       run "ln -s -f -T #{rel_dir} #{DEPLOY_ROOT}/current"
+      run "ln -s #{DEPLOY_ROOT}/log #{DEPLOY_ROOT}/current/log"
       restart_daemons
     end
     
     desc "Restart the server"
     remote_task :restart do
       restart_daemons
+    end
+    
+    desc "Install nginx config"
+    remote_task :setup_nginx do
+      run "sudo ln -s #{DEPLOY_ROOT}/current/config/nginx.conf /etc/nginx/sites-enabled/#{APP_NAME}.conf"
+    end
+    
+    desc "Restart nginx"
+    remote_task :restart_nginx do
+      run "sudo /etc/init.d/nginx restart"
     end
 
     desc "Rollback to the previous release"
