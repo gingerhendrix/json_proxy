@@ -48,8 +48,7 @@ begin
     
     desc "Build the dist files on the remote server"
     remote_task :dist do
-      run "cd #{DEPLOY_ROOT}/current"
-      run "rake dist:js"
+      run "cd #{DEPLOY_ROOT}/current && rake dist:js"
     end
     
     desc "Restart the server"
