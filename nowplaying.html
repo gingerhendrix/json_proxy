@@ -3,29 +3,33 @@
     <script src="/static/MochiKit/MochiKit.js"></script>
     <script src="/static/jsUtils.js"></script>
     
-    <script src="/static/NowPlaying/utils/databean.js"></script>
+    <% if Sinatra::Options.environment == :development %>
+      <script src="/static/NowPlaying/utils/databean.js"></script>
 
-    <script src="/static/NowPlaying/data/audioscrobbler/recent_tracks_datasource.js"></script>
-    <script src="/static/NowPlaying/data/audioscrobbler/album_info_datasource.js"></script>
-    <script src="/static/NowPlaying/data/audioscrobbler/top_albums_datasource.js"></script>
-    <script src="/static/NowPlaying/data/audioscrobbler/similar_artists_datasource.js"></script>
-    
-    <script src="/static/NowPlaying/data/musicbrainz/artist_urls_datasource.js"></script>
-    <script src="/static/NowPlaying/data/wikipedia/wikipedia_datasource.js"></script>
+      <script src="/static/NowPlaying/data/audioscrobbler/recent_tracks_datasource.js"></script>
+      <script src="/static/NowPlaying/data/audioscrobbler/album_info_datasource.js"></script>
+      <script src="/static/NowPlaying/data/audioscrobbler/top_albums_datasource.js"></script>
+      <script src="/static/NowPlaying/data/audioscrobbler/similar_artists_datasource.js"></script>
+      
+      <script src="/static/NowPlaying/data/musicbrainz/artist_urls_datasource.js"></script>
+      <script src="/static/NowPlaying/data/wikipedia/wikipedia_datasource.js"></script>
 
-    <script src="/static/NowPlaying/data/now_playing_datasource.js"></script>
-    <script src="/static/NowPlaying/data/album_info_datasource.js"></script>
-    <script src="/static/NowPlaying/data/artist_info_datasource.js"></script>
+      <script src="/static/NowPlaying/data/now_playing_datasource.js"></script>
+      <script src="/static/NowPlaying/data/album_info_datasource.js"></script>
+      <script src="/static/NowPlaying/data/artist_info_datasource.js"></script>
 
-    <script src="/static/NowPlaying/ui/bar_chart.js"></script>
+      <script src="/static/NowPlaying/ui/bar_chart.js"></script>
 
-    <script src="/static/NowPlaying/ui/data_panel.js"></script>     
-    <script src="/static/NowPlaying/ui/now_playing_panel.js"></script>
-    <script src="/static/NowPlaying/ui/top_albums_panel.js"></script>
-    <script src="/static/NowPlaying/ui/similar_artists_panel.js"></script>
-    <script src="/static/NowPlaying/ui/album_info_panel.js"></script>
-    <script src="/static/NowPlaying/ui/artist_info_panel.js"></script>
-    
+      <script src="/static/NowPlaying/utils/data_panel.js"></script>     
+      <script src="/static/NowPlaying/ui/now_playing_panel.js"></script>
+      <script src="/static/NowPlaying/ui/top_albums_panel.js"></script>
+      <script src="/static/NowPlaying/ui/similar_artists_panel.js"></script>
+      <script src="/static/NowPlaying/ui/album_info_panel.js"></script>
+      <script src="/static/NowPlaying/ui/artist_info_panel.js"></script>
+    <% else %>
+       <script src="/static/NowPlaying/NowPlaying.js"></script>
+       <script src="http://gandrew.com/mint/?js"></script>
+    <% end %>
     <script src="/static/MochiKit/MochiKit.js"></script>
     <link rel="stylesheet" href="/static/nowplaying.css"/>
     <script>
@@ -158,7 +162,7 @@
     </div>
 
   <div id="main" style="display: none">
-    
+
    <div id="username_input" >
       <label>last.fm username</label>
       <input type="text" id="username"></input>

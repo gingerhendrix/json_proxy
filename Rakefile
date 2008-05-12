@@ -10,8 +10,7 @@ require 'rake'
 require 'rake/clean'
 require 'rake/packagetask'
 
-
-$:.unshift File.dirname(__FILE__) + "/lib"
+$:.unshift File.dirname(__FILE__) + "/tasks/lib"
 
 APP_VERSION  = '0.3.1'
 APP_NAME     = 'NowPlaying'
@@ -22,6 +21,8 @@ DEPLOY_ROOT = "/var/web/projects/#{APP_NAME}"
 ON_DEPLOY_RESTART = []
 APP_SERVER = "linode.gandrew.com"
 SVN_REPO = "svn+ssh://gandrew.com/home/1439/users/.home/repos/nowplaying/trunk"
+
+JS_SRC_DIR = APP_ROOT + "/static/NowPlaying"
 
 Dir['tasks/**/*.rake'].each { |rake| load rake }
 

@@ -23,7 +23,7 @@ Sinatra::Loader.load_files File.dirname(__FILE__) + "/lib/webservices/musicbrain
 Sinatra::Loader.load_files File.dirname(__FILE__) + "/lib/webservices/wikipedia.rb"
 
 get '/' do
-   File.open("nowplaying.html").read
+   erb File.open("nowplaying.html").read
 end
 
 static '/static', 'static'

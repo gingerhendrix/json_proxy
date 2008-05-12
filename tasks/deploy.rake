@@ -38,12 +38,18 @@ begin
 
       rel = ("%d-%02d" % [date_stamp, serial])
       rel_dir = "#{DEPLOY_ROOT}/rels/#{rel}"
-
+      
       #run "mkdir -p #{rel_dir}"
       run "svn export #{SVN_REPO} #{rel_dir}"
       run "ln -s -f -T #{rel_dir} #{DEPLOY_ROOT}/current"
       run "ln -s #{DEPLOY_ROOT}/log #{DEPLOY_ROOT}/current/log"
       restart_daemons
+    end
+    
+    desc "Build the dist files on the remote server
+    remote_task :dist do
+      run "cd #{DEPLOY_ROOT}/current"
+      run "rake dist:js"
     end
     
     desc "Restart the server"
