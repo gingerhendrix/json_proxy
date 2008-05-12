@@ -46,7 +46,7 @@ begin
       restart_daemons
     end
     
-    desc "Build the dist files on the remote server
+    desc "Build the dist files on the remote server"
     remote_task :dist do
       run "cd #{DEPLOY_ROOT}/current"
       run "rake dist:js"
