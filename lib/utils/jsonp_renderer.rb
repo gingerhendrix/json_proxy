@@ -7,10 +7,11 @@ module NowPlaying
       end
       
       def render_jsonp(response)
+        response_text = response.to_json
         if params[:jsonp]
-          out = params[:jsonp] + "(" + response.to_json + ")"
+          out = params[:jsonp] + "(" + response_text + ")"
         else
-          out = "(" + response.to_json + ")"
+          out = "(" + response_text + ")"
         end
         out
       end   
