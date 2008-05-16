@@ -52,7 +52,7 @@ module NowPlaying
               out = "(" + response_text + ")"
             end
             out
-         end
+          end
           
           def cache(&block)
             cache = ::Utils::Cache.new "#{@namespace}/#{@name}"
