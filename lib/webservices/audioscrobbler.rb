@@ -1,12 +1,10 @@
 
 
-get '/audioscrobbler/recent_tracks.js' do
-  user = Scrobbler::User.new(params[:username])
-  json_p user.recent_tracks
-end	
-
 np_namespace "audioscrobbler" do |ns|
-
+  ns.route 'recent_tracks', [:username], {:cache => false } do |username|
+    Scrobbler::User.new(username).recent_tracks
+  end
+  
   ns.route 'album_info', [:artist, :album]  do |artist, album|
     Scrobbler::Album.new(artist, album, :include_info => true)
   end
