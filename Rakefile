@@ -12,17 +12,15 @@ require 'rake/packagetask'
 
 $:.unshift File.dirname(__FILE__) + "/tasks/lib"
 
-APP_VERSION  = '0.3.1'
-APP_NAME     = 'NowPlaying'
+APP_VERSION  = '0.4.0'
+APP_NAME     = 'json_proxy'
 
 APP_ROOT     = File.expand_path(File.dirname(__FILE__))
 
-DEPLOY_ROOT = "/var/web/projects/#{APP_NAME}"
+DEPLOY_ROOT = "/var/web/apps/#{APP_NAME}"
 ON_DEPLOY_RESTART = []
 APP_SERVER = "linode.gandrew.com"
-SVN_REPO = "svn+ssh://gandrew.com/home/1439/users/.home/repos/nowplaying/trunk"
-
-JS_SRC_DIR = APP_ROOT + "/static/NowPlaying"
+#SVN_REPO = "svn+ssh://gandrew.com/home/1439/users/.home/repos/nowplaying/trunk"
 
 Dir['tasks/**/*.rake'].each { |rake| load rake }
 

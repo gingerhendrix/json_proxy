@@ -6,7 +6,7 @@ require 'fileutils'
 
 ARGV.push("--").push("--log").push(File.expand_path( File.dirname(__FILE__)  + "/../log/development.log")).push("-e").push("production")
 
-Daemons.run(File.join(File.dirname(__FILE__),  '../nowplaying.rb'),   
+Daemons.run(File.join(File.dirname(__FILE__),  '../json_proxy.rb'),   
             :dir_mode => :script, 
             :dir => "log",
             :mode => "exec")
