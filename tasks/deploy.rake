@@ -41,12 +41,10 @@ begin
       rel_dir = "#{DEPLOY_ROOT}/rels/#{rel}"
       
       run "mkdir -p #{rel_dir}"
-      run "mkdir -p #{rel_dir}/log"
-      run "mkdir -p #{rel_dir}/cache"
       run "tar -xzvf /tmp/#{archive} -C #{rel_dir} && rm -rf /tmp/#{archive}"
       run "ln -s -f -T #{rel_dir} #{DEPLOY_ROOT}/current"
-      run "ln -s #{DEPLOY_ROOT}/log #{DEPLOY_ROOT}/current/log"
-      run "ln -s #{DEPLOY_ROOT}/cache #{DEPLOY_ROOT}/current/cache"
+      run "ln -s -f -T #{DEPLOY_ROOT}/log #{DEPLOY_ROOT}/current/log"
+      run "ln -s -f -T #{DEPLOY_ROOT}/cache #{DEPLOY_ROOT}/current/cache"
       restart_daemons
     end
     
