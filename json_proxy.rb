@@ -1,14 +1,24 @@
+require 'rubygems'
 
-require File.dirname(__FILE__) + '/vendor/gems/sinatra-0.1.7/lib/sinatra.rb'
-require File.dirname(__FILE__) + '/vendor/gems/scrobbler-0.1.1/lib/scrobbler.rb'
+require 'activesupport'
 
-require File.dirname(__FILE__) + '/vendor/gems/mbleigh-mash-0.0.5/lib/mash.rb'
-require File.dirname(__FILE__) + '/vendor/gems/mbleigh-ruby-github-0.0.4/lib/ruby-github.rb'
+module JSON
+  def self.parse(json)
+    ActiveSupport::JSON.decode(json)
+  end
+end
 
 require 'rbrainz'
 require 'hpricot'
 require 'open-uri'
 require 'fileutils'
+
+
+require File.dirname(__FILE__) + '/vendor/gems/sinatra-0.1.7/lib/sinatra.rb'
+require File.dirname(__FILE__) + '/vendor/gems/scrobbler-0.1.1/lib/scrobbler.rb'
+require File.dirname(__FILE__) + '/vendor/gems/mbleigh-mash-0.0.5/lib/mash.rb'
+require File.dirname(__FILE__) + '/vendor/gems/mbleigh-ruby-github-0.0.4/lib/ruby-github.rb'
+
 
 FileUtils.cd File.dirname(__FILE__)
 
