@@ -1,7 +1,7 @@
 require 'fileutils'
 
 module Utils
-  class Cache
+  class FileCache
     class << self
       attr_accessor :base_dir
     end

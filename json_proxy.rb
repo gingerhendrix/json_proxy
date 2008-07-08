@@ -22,8 +22,11 @@ require File.dirname(__FILE__) + '/vendor/gems/mbleigh-ruby-github-0.0.4/lib/rub
 
 FileUtils.cd File.dirname(__FILE__)
 
-Sinatra::Loader.load_files File.dirname(__FILE__) + "/lib/utils/cache.rb"
-Utils::Cache.base_dir = File.dirname(__FILE__) + '/cache'
+Sinatra::Loader.load_files File.dirname(__FILE__) + "/lib/utils/file_cache.rb"
+Utils::FileCache.base_dir = File.dirname(__FILE__) + '/cache'
+
+Sinatra::Loader.load_files File.dirname(__FILE__) + "/lib/utils/couch_server.rb"
+Sinatra::Loader.load_files File.dirname(__FILE__) + "/lib/utils/couch_cache.rb"
 
 Sinatra::Loader.load_files File.dirname(__FILE__) + "/lib/utils/jsonp_renderer.rb"
 Sinatra::EventContext.send :include, NowPlaying::Utils::JsonpRenderer

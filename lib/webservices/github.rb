@@ -1,7 +1,7 @@
 
 np_namespace "github" do |ns|
   ns.route 'user_info', [:username], {:cache => false} do |username|
-    GitHub::API.user('gingerhendrix')
+    GitHub::API.user(username)
   end
   
   ns.route "commits", [:username, :repo] do |username, repo|

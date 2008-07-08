@@ -55,7 +55,7 @@ module NowPlaying
           end
           
           def cache(&block)
-            cache = ::Utils::Cache.new "#{@namespace}/#{@name}"
+            cache = ::Utils::CouchCache.new "#{@namespace.downcase}_#{@name.downcase}"
             if @options[:cache]
                raise "Invalid cache_key: should be a Proc" unless @options[:cache_key] && @options[:cache_key].is_a?(Proc)
                key = @options[:cache_key].call *@args
