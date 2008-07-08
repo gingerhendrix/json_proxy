@@ -9,11 +9,11 @@ module Utils
     end
     
     def store(key, value)
-      @server.put("/#{@database}/#{key}", value)
+      @server.put("/#{@database}/#{key.gsub(/[^a-zA-Z0-9_]/, "_")}", value)
     end
     
     def fetch(key)
-      res = @server.get("/#{@database}/#{key}")
+      res = @server.get("/#{@database}/#{key.gsub(/[^a-zA-Z0-9_]/, "_")}")
       res.code == "200" ? res.body : nil
     end
   end

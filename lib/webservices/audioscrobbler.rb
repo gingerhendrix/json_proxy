@@ -10,11 +10,11 @@ np_namespace "audioscrobbler" do |ns|
   end
 
   ns.route 'top_albums', [:artist]  do |artist|
-     Scrobbler::Artist.new(artist).top_albums
+     {:top_albums => Scrobbler::Artist.new(artist).top_albums }
   end
 
   ns.route "similar_artists", [:artist] do | artist |
-    Scrobbler::Artist.new(artist).similar
+     {:similar_artists => Scrobbler::Artist.new(artist).similar }
   end
 
 end
