@@ -6,39 +6,29 @@ module NowPlaying
          yield NPNamespace.new(name)
         end
         
-        class NPRoute
-
-          def params
-            @params          
-          end
-                              
+        class NPRouteHandler
           def initialize(namespace, name, arg_names, options={}, block = Proc.new)
-            @options = default_options.merge options
+            @options = options
             @block = block
             @arg_names = arg_names
             @name = name
             @namespace = namespace
-            route = self            
-            get "/#{namespace}/#{name}.js" do
-              route.action(params)
-            end          
-          end
-          
+          end      
+           
           def action(params)
             @params = params
-            @args = @arg_names.map { |a| params[a] }
+            @args = @arg_names.map { |a| @params[a] }
             result = nil
-            result = cache do
-               json @block.call *@args
-            end 
-            json_padding result          
+            begin
+              result = cache do
+                json @block.call(*@args)
+              end 
+              json_padding result          
+            rescue Exception => e
+              json_padding :error => "Error: " + e 
+            end
           end
-          
-          def default_options
-            { :cache => true, 
-              :cache_key => Proc.new { |*args| args.join("-") } 
-            }
-          end
+        
           
           def json(response)
             response.to_json
@@ -46,8 +36,9 @@ module NowPlaying
           
           def json_padding(response)
             response_text = (response.is_a?(String) ? response : response.to_json)
-            if params[:jsonp]
-              out = params[:jsonp] + "(" + response_text + ")"
+            if @params[:jsonp]
+              puts "#{@namespace}/#{@name} #{@args} jsonp: #{@params[:jsonp]} \n"
+              out = @params[:jsonp] + "(" + response_text + ")"
             else
               out = "(" + response_text + ")"
             end
@@ -69,6 +60,35 @@ module NowPlaying
             end
             result            
           end
+ 
+ 
+        end
+        
+        class NPRoute
+
+                              
+          def initialize(namespace, name, arg_names, options={}, block = Proc.new)
+            @options = default_options.merge options
+            @block = block
+            @arg_names = arg_names
+            @name = name
+            @namespace = namespace
+            
+          
+            get "/#{namespace}/#{name}.js" do
+               puts self.params;
+               
+               route = NPRouteHandler.new(namespace, name, arg_names, options, block)
+               route.action(self.params)
+            end          
+          end
+          
+          def default_options
+            { :cache => true, 
+              :cache_key => Proc.new { |*args| args.join("-") } 
+            }
+          end
+          
         end
         
         end

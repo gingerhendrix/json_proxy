@@ -108,18 +108,18 @@ module Scrobbler
     
     def load_profile
       doc                  = self.class.fetch_and_parse("#{api_path}/profile.xml")
-      @id                  = (doc).at(:profile)['id']
-      @cluster             = (doc).at(:profile)['cluster']
-      @url                 = (doc).at(:url).inner_html
-      @realname            = (doc).at(:realname).inner_html
-      @mbox_sha1sum        = (doc).at(:mbox_sha1sum).inner_html
-      @registered          = (doc).at(:registered).inner_html
-      @registered_unixtime = (doc).at(:registered)['unixtime']
-      @age                 = (doc).at(:age).inner_html
-      @gender              = (doc).at(:gender).inner_html
-      @country             = (doc).at(:country).inner_html
-      @playcount           = (doc).at(:playcount).inner_html
-      @avatar              = (doc).at(:avatar).inner_html
+      @id                  = (doc).at(:profile) ? (doc).at(:profile)['id'] : nil
+      @cluster             = (doc).at(:profile) ? (doc).at(:profile)['cluster'] : nil
+      @url                 = (doc).at(:url) ? (doc).at(:url).inner_html : nil
+      @realname            = (doc).at(:realname) ? (doc).at(:realname).inner_html : nil
+      @mbox_sha1sum        = (doc).at(:mbox_sha1sum) ? (doc).at(:mbox_sha1sum).inner_html : nil
+      @registered          = (doc).at(:registered) ? (doc).at(:registered).inner_html : nil
+      @registered_unixtime = (doc).at(:registered) ? (doc).at(:registered)['unixtime'] : nil
+      @age                 = (doc).at(:age) ? (doc).at(:age).inner_html : nil
+      @gender              = (doc).at(:gender) ? (doc).at(:gender).inner_html : nil
+      @country             = (doc).at(:country) ? (doc).at(:country).inner_html : nil
+      @playcount           = (doc).at(:playcount) ? (doc).at(:playcount).inner_html : nil
+      @avatar              = (doc).at(:avatar) ? (doc).at(:avatar).inner_html : nil
     end
     
     def top_artists(force=false)

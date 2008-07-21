@@ -1,5 +1,19 @@
 
 np_namespace "musicbrainz" do |ns|
+    
+    ns.route 'artist_search', [:query] do |name|
+      query  = MusicBrainz::Webservice::Query.new
+      artists = query.get_artists :name => name, :limit => 10
+      
+      results = artists.map do |a|
+        { :score => a.score,
+          :artist_name => a.entity.name,
+          :artist_mbid => a.entity.id.uuid
+        }
+      end
+      
+      results
+    end
 
     ns.route 'artist_releases', [:artist_mbid] do |artist_mbid|
         includes = {

@@ -1,6 +1,13 @@
 
 
 np_namespace "audioscrobbler" do |ns|
+  
+  ns.route 'user_info', [:username] do |username|
+    user = Scrobbler::User.new(username)
+    user.load_profile
+    user
+  end
+
   ns.route 'recent_tracks', [:username], {:cache => false } do |username|
     Scrobbler::User.new(username).recent_tracks
   end
