@@ -12,7 +12,7 @@ np_namespace "musicbrainz" do |ns|
         }
       end
       
-      results
+      {:results => results}
     end
 
     ns.route 'artist_releases', [:artist_mbid] do |artist_mbid|
