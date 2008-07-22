@@ -3,18 +3,18 @@ module Server
   class Server 
   
     def initialize
-      @namespace_manager = NamespaceManager.instance
+      @route_manager = RouteManager.instance
     end
 
     def call(env)
       request = Rack::Request.new(env)
       response = Rack::Response.new()
       
-      handler = @namespace_manager.handler_for(request.path_info);
-      if(!handler)
+      route = @route_manager.route_for(request.path_info);
+      if(!route)
         response.body = "Handler not found"
       else
-        handler.action(request, response)
+        route.action(request, response)
       end
       
       response.finish

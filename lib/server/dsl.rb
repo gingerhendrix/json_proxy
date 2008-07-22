@@ -12,11 +12,10 @@ module Server
        end        
                     
        def route(name, arg_names, options={}, &block)
-          handler = RouteHandler.new(@namespace, name, arg_names, options, block)
-          NamespaceManager.instance.register_handler(@namespace, name, handler)
+          route = Route.new(@namespace, name, arg_names, options, block)
+          RouteManager.instance.register_route(@namespace, name, route)
        end
     end
-  
   
   end
 end

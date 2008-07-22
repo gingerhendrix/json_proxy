@@ -1,16 +1,16 @@
 require 'singleton'
 
 module Server
-  class NamespaceManager 
+  class RouteManager 
     include Singleton
     
     def initialize
       @map = Hash.new
     end
        
-    def handler_for(path)
-      namespace = path.slice /\/(.*)\/(.*)/, 1
-      name = path.slice /\/(.*)\/(.*)/, 2
+    def route_for(path)
+      namespace = path.slice /\/(.*)\/(.*)\.(.*)$/, 1
+      name = path.slice /\/(.*)\/(.*)\.(.*)$/, 2
       puts "Namespace: #{namespace}  name: #{name}  map: #{@map} \n"  
       if (@map.key? namespace)
         puts "Namespace found\n"
@@ -23,11 +23,11 @@ module Server
       end
     end
 
-    def register_handler(namespace, name, handler)
+    def register_route(namespace, name, route)
       if !@map.key? namespace
         @map[namespace] = Hash.new
       end
-      @map[namespace][name] = handler        
+      @map[namespace][name] = route
       puts "Registered #{namespace}/#{name}\n"
     end
 

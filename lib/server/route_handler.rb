@@ -12,9 +12,11 @@ module Server
     def action(request, response)
       response.body = _action request.params
     end
-     
+
+private
+    
     def _action(params)
-      @params = params
+      @params = HashWithIndifferentAccess.new params
       @args = @arg_names.map { |a| @params[a.to_s] }
       puts "Params: #{@params}\n Arg_names: #{@arg_names}\nArgs: #{@args}"
       result = nil
@@ -36,8 +38,8 @@ module Server
     def json_padding(response)
       response_text = (response.is_a?(String) ? response : response.to_json)
       if @params[:jsonp]
-        puts "#{@namespace}/#{@name} #{@args} jsonp: #{@params[:jsonp]} \n"
-        out = @params[:jsonp] + "(" + response_text + ")"
+        puts "#{@namespace}/#{@name} #{@args} jsonp: #{@params['jsonp']} \n"
+        out = @params['jsonp'] + "(" + response_text + ")"
       else
         out = "(" + response_text + ")"
       end
