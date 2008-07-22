@@ -1,45 +1,24 @@
 
 require 'rubygems'
 require 'rack'
+require 'activesupport'
 
+require File.dirname(__FILE__) + '/lib/server/server.rb'
+require File.dirname(__FILE__) + '/lib/server/namespace_manager.rb'
+require File.dirname(__FILE__) + '/lib/server/route_handler.rb'
+require File.dirname(__FILE__) + '/lib/server/dsl.rb'
 
+require File.dirname(__FILE__) + '/lib/utils/couch_cache.rb'
+require File.dirname(__FILE__) + '/lib/utils/couch_server.rb'
 
-class JsonProxyServer 
-  
-  def initialize(namespace_manager)
-    @namespace_manager = namespace_manager
-  end
+require File.dirname(__FILE__) + '/vendor/gems/scrobbler-0.1.1/lib/scrobbler.rb'
 
-  def call(env)
-    request = Rack::Request.new(env)
-    response = Rack::Response.new()
-    
-    handler = @namespace_manager.handler_for(request.path_info);
-    if(!handler)
-      response.body = "Handler not found"
-    else
-      handler.action(request, response)
-    end
-    
-    response.finish
-  end
+app = Rack::ShowExceptions.new Server::Server.new 
 
-end
+include Server::DSL
 
-class NamespaceManager
+require File.dirname(__FILE__) + '/lib/webservices/audioscrobbler.rb'
 
-  def handler_for(path)
-    
-  end
-
-  def register_handler
-  
-  end
-
-end
-
-ns_manager = NamespaceManager.new
-app = JsonProxyServer.new ns_manager
 
 Rack::Handler::Mongrel.run(app, :Port => 3000) do |server|
   puts "==  json_proxy running on port 3000"
