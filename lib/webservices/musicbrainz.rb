@@ -14,6 +14,32 @@ np_namespace "musicbrainz" do |ns|
       
       {:results => results}
     end
+    
+    ns.route 'artist_members', [:artist_mbid] do |artist_mbid|
+      includes = {
+          :aliases      => false,
+          :releases     => [],
+          :artist_rels  => true,
+          :release_rels => false,
+          :track_rels   => false,
+          :label_rels   => false,
+          :url_rels     => false
+      }
+
+      query  = MusicBrainz::Webservice::Query.new
+      id     = artist_mbid
+      artist = query.get_artist_by_id(id, includes)
+    
+      relations = artist.get_relations :target_type => MusicBrainz::Model::Relation::TO_ARTIST
+      { :relations => relations.map do |rel|
+          {:type => MusicBrainz::Utils.remove_namespace(rel.type, MusicBrainz::Model::NS_REL_1),
+           :mbid=> rel.target.id.uuid,
+           :name => rel.target.name,
+           :begindate => rel.target.begin_date.to_s,
+           :enddate => rel.target.end_date.to_s } 
+        end
+      }
+    end
 
     ns.route 'artist_releases', [:artist_mbid] do |artist_mbid|
         includes = {
