@@ -35,6 +35,7 @@ np_namespace "musicbrainz" do |ns|
           {:type => MusicBrainz::Utils.remove_namespace(rel.type, MusicBrainz::Model::NS_REL_1),
            :mbid=> rel.target.id.uuid,
            :name => rel.target.name,
+           :direction => rel.direction,
            :begindate => rel.target.begin_date.to_s,
            :enddate => rel.target.end_date.to_s } 
         end
