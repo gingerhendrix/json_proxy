@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require File.dirname(__FILE__) + '/../lib/discogs.rb'
+require File.dirname(__FILE__) + '/../lib/util.rb'
+
+Discogs::Util.run!

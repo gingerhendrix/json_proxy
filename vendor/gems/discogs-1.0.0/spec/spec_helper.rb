@@ -1,0 +1,12 @@
+require 'rubygems'
+require 'spec'
+$:.unshift(File.dirname(__FILE__) + '/../lib')
+require 'base'
+require 'artist'
+require 'label'
+require 'release'
+require 'format'
+require 'image'
+require 'track'
+require 'contributor'
+require 'search'

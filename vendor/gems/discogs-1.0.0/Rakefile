@@ -1,0 +1,22 @@
+# -*- ruby -*-
+
+require 'rubygems'
+require 'spec'
+require 'rubygems'
+require 'spec/rake/spectask'
+require 'hoe'
+require './lib/discogs.rb'
+
+Hoe.new('discogs', Discogs::VERSION) do |p|
+  p.rubyforge_name = 'discogs' # if different than lowercase project name
+  p.developer('Josh Stephenson', 'josh@joshstephenson.net')
+end
+
+desc "Run all specs in spec directory"
+Spec::Rake::SpecTask.new(:spec) do |t|
+#  t.rcov = true
+#  t.rcov_opts = ["--output=coverage"]
+  t.spec_opts = ["--color"]
+  t.spec_files = FileList['spec/*_spec.rb']
+end
+
