@@ -20,14 +20,14 @@ private
       @args = @arg_names.map { |a| @params[a.to_s] }
       puts "Params: #{@params}\n Arg_names: #{@arg_names}\nArgs: #{@args}"
       result = nil
-      begin
+      #begin
         result = cache do
           json @block.call(*@args)
         end 
         json_padding result          
-      rescue Exception => e
-        json_padding :error => "Error: " + e 
-      end
+      #rescue Exception => e
+      #  json_padding :error => "Error: " + e 
+      #end
     end
   
     

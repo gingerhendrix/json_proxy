@@ -54,7 +54,7 @@ module Discogs
 
     protected
       def request_url
-        "#{base_url}/search?type=#{search_type}&q=#{request_string}&f=xml&api_key=#{api_key}"
+        "#{base_url}/search?type=#{search_type}&q=#{CGI::escape(@request_string)}&f=xml&api_key=#{api_key}"
       end
   end
 

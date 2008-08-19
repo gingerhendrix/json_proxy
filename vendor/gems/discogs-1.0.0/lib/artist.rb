@@ -13,11 +13,11 @@ module Discogs
     end
 
     def realname
-      @realname ||= (parsed/'artist'/'realname').first.inner_html
+      @realname ||=  (parsed/'artist'/'realname').first ? (parsed/'artist'/'realname').first.inner_html : nil   
     end
 
     def members
-      @members ||= (parsed/'artist'/'members'/'name').collect { |artist| artist.inner_html }
+      @members ||= (parsed/'artist'/'members'/'name').collect { |artist| artist.inner_html } 
     end
 
     def images
@@ -36,7 +36,14 @@ module Discogs
 
     def releases
       @release ||= (parsed/'artist'/'releases'/'release').collect do |release| 
-        Release.new(api_key, release.attributes['id']) 
+        SimpleRelease.new(release.attributes['id'], { 
+                  :title => (release/'title').inner_html, 
+                  :label => (release/'label').inner_html, 
+                  :format => (release/'format').inner_html, 
+                  :year => (release/'year').inner_html,
+                  :discog_status => release.attributes['status'],
+                  :discog_type => release.attributes['type'],
+                  :trackinfo => (release/'trackinfo').inner_html} ) 
       end
     end
 

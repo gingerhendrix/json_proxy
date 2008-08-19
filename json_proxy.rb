@@ -22,6 +22,7 @@ require File.dirname(__FILE__) + '/vendor/gems/scrobbler-0.1.1/lib/scrobbler.rb'
 require File.dirname(__FILE__) + '/vendor/gems/mbleigh-mash-0.0.5/lib/mash.rb'
 require File.dirname(__FILE__) + '/vendor/gems/mbleigh-ruby-github-0.0.4/lib/ruby-github.rb'
 require File.dirname(__FILE__) + '/vendor/gems/rbrainz-0.4.0/lib/rbrainz.rb'
+require File.dirname(__FILE__) + '/vendor/gems/discogs-1.0.0/lib/discogs.rb'
 
 app = Rack::ShowExceptions.new Server::Server.new 
 
@@ -31,6 +32,7 @@ require File.dirname(__FILE__) + '/lib/webservices/audioscrobbler.rb'
 require File.dirname(__FILE__) + "/lib/webservices/musicbrainz.rb"
 require File.dirname(__FILE__) + "/lib/webservices/wikipedia.rb"
 require File.dirname(__FILE__) + "/lib/webservices/github.rb"
+require File.dirname(__FILE__) + "/lib/webservices/discogs.rb"
 
 Rack::Handler::Mongrel.run(app, :Port => 4567) do |server|
   puts "==  json_proxy running on port 4567"

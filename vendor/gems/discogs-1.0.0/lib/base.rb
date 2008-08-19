@@ -23,7 +23,10 @@ module Discogs
 
     def fetched
       @fetched ||= begin
-        gz = Zlib::GzipReader.new(open(request_url, 'Accept-encoding' => 'gzip, deflate'))
+        gz = open(request_url, 'Accept-encoding' => 'gzip, deflate') #Zlib::GzipReader.new(open(request_url, 'Accept-encoding' => 'gzip, deflate'))
+        if gz.content_encoding == ["gzip"] 
+          gz = Zlib::GzipReader.new gz   
+        end
         fetched = gz.read
         gz.close
         fetched
@@ -31,6 +34,11 @@ module Discogs
     end
 
     protected
+    
+      def base_url
+        DISCOGS_BASE_URL
+      end
+    
       def request_url
         "#{DISCOGS_BASE_URL}/#{request_type}/#{CGI::escape(request_string)}?f=xml&api_key=#{api_key}"
       end
