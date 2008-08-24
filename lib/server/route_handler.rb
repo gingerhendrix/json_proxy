@@ -16,18 +16,21 @@ module Server
 private
     
     def _action(params)
-      @params = HashWithIndifferentAccess.new params
-      @args = @arg_names.map { |a| @params[a.to_s] }
-      puts "Params: #{@params}\n Arg_names: #{@arg_names}\nArgs: #{@args}"
-      result = nil
-      #begin
+      begin
+        @params = HashWithIndifferentAccess.new params
+        missing = @arg_names.select { |a| @params[a.to_s].nil? || @params[a.to_s]=="" }
+        if(missing.length > 0)
+          raise "Missing arguments #{missing}"         
+        end
+        @args = @arg_names.map { |a| @params[a.to_s] }
         result = cache do
           json @block.call(*@args)
         end 
         json_padding result          
-      #rescue Exception => e
-      #  json_padding :error => "Error: " + e 
-      #end
+      rescue Exception => e
+        puts "Exception: #{e}"
+        json_padding :error => "Error: " + e 
+      end
     end
   
     
@@ -38,7 +41,7 @@ private
     def json_padding(response)
       response_text = (response.is_a?(String) ? response : response.to_json)
       if @params[:jsonp]
-        puts "#{@namespace}/#{@name} #{@args} jsonp: #{@params['jsonp']} \n"
+        #puts "#{@namespace}/#{@name} #{@args} jsonp: #{@params['jsonp']} \n"
         out = @params['jsonp'] + "(" + response_text + ")"
       else
         out = "(" + response_text + ")"
