@@ -43,25 +43,36 @@ np_namespace "musicbrainz" do |ns|
     end
 
     ns.route 'artist_releases', [:artist_mbid] do |artist_mbid|
-        includes = {
-          :aliases      => false,
-          :releases     => ['Album', 'Official'],
-          :artist_rels  => false,
-          :release_rels => true,
-          :track_rels   => false,
-          :label_rels   => false,
-          :url_rels     => false
-        }
+        includes = MusicBrainz::Webservice::ArtistIncludes.new :aliases      => false,
+                                                               :releases     => ['Album', 'Official'],
+                                                               :artist_rels  => false,
+                                                               :release_rels => true,
+                                                               :track_rels   => false,
+                                                               :label_rels   => false,
+                                                               :url_rels     => false,
+                                                               :release_events => true
         
         query  = MusicBrainz::Webservice::Query.new
         id     = artist_mbid
         artist = query.get_artist_by_id(id, includes)
 
         releases = artist.releases.map do |rel|
-           { :title => rel.title, 
-             :releases => rel.release_events.map { |ev| ev.date.to_s },
-             :earliest_release_date => rel.earliest_release_date, 
-             :earliest_release_event => rel.earliest_release_event } 
+           { :artist => rel.artist.to_s,
+             :artist_mbid => rel.artist.id.uuid,
+             :title => rel.title, 
+             :discs => rel.discs,
+             :asin => rel.asin,
+             :type => rel.types.map { |type| MusicBrainz::Utils.remove_namespace(type, MusicBrainz::Model::NS_MMD_1) },
+             :release_events => rel.release_events.map { |ev| 
+                                                   { :date => ev.date.to_s,
+                                                          :barcode => ev.barcode,
+                                                          :catalog_number => ev.catalog_number,
+                                                          :country => ev.country,
+                                                          :format => (!ev.format.nil? ? ev.format.map { |format| MusicBrainz::Utils.remove_namespace(format, MusicBrainz::Model::NS_MMD_1) } : [] ),
+                                                          :label => (!ev.label.nil? ? ev.label.name : "")
+                                                   }
+                                                 },
+          } 
         end
 
         { :releases =>  releases}

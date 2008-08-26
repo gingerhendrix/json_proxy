@@ -5,10 +5,6 @@
 # License::   RBrainz is free software distributed under a BSD style license.
 #             See LICENSE[file:../LICENSE.html] for permissions.
  
-require 'rbrainz/model/mbid'
-require 'rbrainz/model/relation'
-require 'rbrainz/model/collection'
-require 'rbrainz/model/tag'
 require 'set'
 
 module MusicBrainz

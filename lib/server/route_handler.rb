@@ -28,7 +28,9 @@ private
         end 
         json_padding result          
       rescue Exception => e
-        puts "Exception: #{e}"
+        puts "Exception: #{e} \n"
+        pp e.backtrace 
+        puts "\n"
         json_padding :error => "Error: " + e 
       end
     end

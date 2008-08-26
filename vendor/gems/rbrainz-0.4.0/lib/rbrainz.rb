@@ -12,5 +12,21 @@
 # License::   RBrainz is free software distributed under a BSD style license.
 #             See LICENSE[file:../LICENSE.html] for permissions.
 
-require 'rbrainz/webservice'
-require 'rbrainz/core_ext'
+#require 'rbrainz/webservice'
+#require 'rbrainz/core_ext'
+
+require File.dirname(__FILE__) + '/rbrainz/webservice.rb'
+Dir.glob(File.dirname(__FILE__) + '/rbrainz/webservice/*.rb') { |f| require f }
+
+require File.dirname(__FILE__) + '/rbrainz/model/mbid.rb'
+
+require File.dirname(__FILE__) + '/rbrainz/model.rb'
+
+require File.dirname(__FILE__) + '/rbrainz/model/entity.rb'
+require File.dirname(__FILE__) + '/rbrainz/model/individual.rb'
+
+Dir.glob(File.dirname(__FILE__) + '/rbrainz/model/*.rb') { |f| require f }
+
+require File.dirname(__FILE__) + '/rbrainz/version.rb'
+require File.dirname(__FILE__) + '/rbrainz/utils.rb'
+require File.dirname(__FILE__) + '/rbrainz/core_ext.rb'

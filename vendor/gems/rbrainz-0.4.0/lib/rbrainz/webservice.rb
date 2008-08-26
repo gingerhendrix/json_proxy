@@ -59,4 +59,4 @@ module MusicBrainz # :nodoc:
   end 
 end
 
-require 'rbrainz/webservice/query'
+

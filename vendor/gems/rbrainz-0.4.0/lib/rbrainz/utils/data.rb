@@ -7,10 +7,6 @@
 # License::   RBrainz is free software distributed under a BSD style license.
 #             See LICENSE[file:../LICENSE.html] for permissions.
 
-require 'rbrainz/data/countrynames'
-require 'rbrainz/data/languagenames'
-require 'rbrainz/data/scriptnames'
-require 'rbrainz/data/releasetypenames'
 
 module MusicBrainz
 
