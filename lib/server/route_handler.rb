@@ -2,7 +2,7 @@
 module Server
  class RouteHandler
     def initialize(namespace, name, arg_names, options={}, block = Proc.new)
-      @options = options
+      @options = {:cache => true, :cache_key => Proc.new { |*args| args.join("_") } }.merge(options)
       @block = block
       @arg_names = arg_names
       @name = name
@@ -52,16 +52,20 @@ private
     end
     
     def cache(&block)
-      cache = ::Utils::CouchCache.new "#{@namespace.downcase}_#{@name.downcase}"
       if @options[:cache]
+         cache = ::Utils::CouchCache.new "#{@namespace.downcase}_#{@name.downcase}"
          raise "Invalid cache_key: should be a Proc" unless @options[:cache_key] && @options[:cache_key].is_a?(Proc)
          key = @options[:cache_key].call *@args
          result = cache.fetch key
          if result.nil?
+           puts "Cache Miss #{@namespace.downcase}_#{@name.downcase}  #{key} \n"
            result = yield
            cache.store key, result
+         else
+           puts "Cache Hit #{@namespace.downcase}_#{@name.downcase}  #{key} \n"
          end
       else
+         puts "Cache Skip #{@namespace.downcase}_#{@name.downcase} \n"
          result = yield
       end
       result            

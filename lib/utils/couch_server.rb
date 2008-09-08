@@ -35,9 +35,6 @@ module Utils
       res = Net::HTTP.start(@host, @port) {|http|
         http.request(req)
       }
-#      if (not res.kind_of?(Net::HTTPSuccess))
-#        handle_error(req, res)
-#      end
       res
     end
 
