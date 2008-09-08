@@ -2,12 +2,15 @@
 require 'rubygems'
 require 'rack'
 require 'activesupport'
+require 'configatron'
 
 module JSON
   def self.parse(json)
     ActiveSupport::JSON.decode(json)
   end
 end
+
+require File.dirname(__FILE__) + '/config/config.rb'
 
 require File.dirname(__FILE__) + '/lib/server/server.rb'
 require File.dirname(__FILE__) + '/lib/server/route.rb'

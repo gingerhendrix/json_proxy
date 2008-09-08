@@ -1,7 +1,7 @@
 module Utils
   class CouchCache
     def initialize(prefix)
-      @server = CouchServer.new "localhost", "5984"
+      @server = CouchServer.new configatron.couchdb.server, configatron.couchdb.port
       @database = prefix
       if @server.get("/#{@database}").code == "404"
         @server.put("/#{@database}", "")

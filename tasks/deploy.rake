@@ -45,12 +45,8 @@ begin
       run "ln -s -f -T #{rel_dir} #{DEPLOY_ROOT}/current"
       run "ln -s -f -T #{DEPLOY_ROOT}/log #{DEPLOY_ROOT}/current/log"
       run "ln -s -f -T #{DEPLOY_ROOT}/cache #{DEPLOY_ROOT}/current/cache"
+      run "ln -s -f -T #{DEPLOY_ROOT}/config/production/config.rb #{DEPLOY_ROOT}/config/config.rb"
       restart_daemons
-    end
-    
-    desc "Build the dist files on the remote server"
-    remote_task :dist do
-      run "cd #{DEPLOY_ROOT}/current && rake dist:js"
     end
     
     desc "Restart the server"
@@ -60,7 +56,7 @@ begin
     
     desc "Install nginx config"
     remote_task :setup_nginx do
-      run "sudo ln -s #{DEPLOY_ROOT}/current/config/nginx.conf /etc/nginx/sites-enabled/#{APP_NAME}.conf"
+      run "sudo ln -s #{DEPLOY_ROOT}/current/config/production/nginx.conf /etc/nginx/sites-enabled/#{APP_NAME}.conf"
     end
     
     desc "Restart nginx"
