@@ -45,7 +45,7 @@ begin
       run "ln -s -f -T #{rel_dir} #{DEPLOY_ROOT}/current"
       run "ln -s -f -T #{DEPLOY_ROOT}/log #{DEPLOY_ROOT}/current/log"
       run "ln -s -f -T #{DEPLOY_ROOT}/cache #{DEPLOY_ROOT}/current/cache"
-      run "ln -s -f -T #{DEPLOY_ROOT}/config/production/config.rb #{DEPLOY_ROOT}/config/config.rb"
+      run "ln -s -f -T #{DEPLOY_ROOT}/current/config/production/config.rb #{DEPLOY_ROOT}/current/config/config.rb"
       restart_daemons
     end
     
