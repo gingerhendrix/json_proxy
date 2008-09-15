@@ -12,11 +12,18 @@ end
 
 require File.dirname(__FILE__) + '/config/config.rb'
 
+require File.dirname(__FILE__) + '/lib/server/handlers/handler.rb'
+require File.dirname(__FILE__) + '/lib/server/handlers/argument_validation_handler.rb'
+require File.dirname(__FILE__) + '/lib/server/handlers/cache_handler.rb'
+require File.dirname(__FILE__) + '/lib/server/handlers/exception_handler.rb'
+require File.dirname(__FILE__) + '/lib/server/handlers/json_handler.rb'
+
 require File.dirname(__FILE__) + '/lib/server/server.rb'
 require File.dirname(__FILE__) + '/lib/server/route.rb'
 require File.dirname(__FILE__) + '/lib/server/route_manager.rb'
-require File.dirname(__FILE__) + '/lib/server/route_handler.rb'
 require File.dirname(__FILE__) + '/lib/server/dsl.rb'
+
+
 
 require File.dirname(__FILE__) + '/lib/utils/couch_cache.rb'
 require File.dirname(__FILE__) + '/lib/utils/couch_server.rb'

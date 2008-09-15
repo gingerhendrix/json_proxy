@@ -1,17 +1,27 @@
 
 module Server
   class Route
+    include Handlers
+    
      def initialize(namespace, name, arg_names, options={}, block = Proc.new)
-      @options = options
-      @block = block
-      @arg_names = arg_names
       @name = name
       @namespace = namespace
+      @options = options
+      @block = block
+      @options[:arg_names] = arg_names
      end
      
      def action(request, response)
-        handler = RouteHandler.new(@namespace, @name, @arg_names, @options, @block)
-        handler.action(request, response)
-     end     
+        JsonHandler.new(@namespace, @name, @options).action(request, response) do |request, response|
+          ExceptionHandler.new(@namespace, @name, @options).action(request, response) do |request, response|
+            ArgumentValidationHandler.new(@namespace, @name, @options).action(request, response) do |request, response|
+              CacheHandler.new(@namespace, @name, @options).action(request, response) do |request, response|
+                   response.body = @block.call(*request.args)
+              end
+            end
+          end
+        end
+     end
+          
   end
 end
