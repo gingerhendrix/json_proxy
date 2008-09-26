@@ -10,11 +10,6 @@ module Server
         if(missing.length > 0)
           raise "Missing arguments #{missing}"         
         end
-
-        class << request
-          attr_accessor :args
-        end
-
         request.args = arg_names.map { |a| params[a.to_s] }
       end
       

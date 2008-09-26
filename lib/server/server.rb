@@ -7,14 +7,8 @@ module Server
     end
 
     def call(env)
-      request = Rack::Request.new(env)
-      class << request
-        alias_method :orig_params, :params
-        def params
-          @indifferent_params ||= HashWithIndifferentAccess.new orig_params
-        end
-      end
-      response = Rack::Response.new()
+      request = JsonRequest.new(env)
+      response = JsonResponse.new()
       
       route = @route_manager.route_for(request.path_info);
       if(!route)

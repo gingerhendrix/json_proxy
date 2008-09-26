@@ -16,7 +16,9 @@ module Server
           ExceptionHandler.new(@namespace, @name, @options).action(request, response) do |request, response|
             ArgumentValidationHandler.new(@namespace, @name, @options).action(request, response) do |request, response|
               CacheHandler.new(@namespace, @name, @options).action(request, response) do |request, response|
-                   response.body = @block.call(*request.args)
+                QueueHandler.new(@namespace, @name, @options) do |request, response|
+                    response.body = @block.call(*request.args)
+                end
               end
             end
           end
