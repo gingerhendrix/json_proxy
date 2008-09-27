@@ -10,6 +10,7 @@ module JSON
   end
 end
 
+require File.dirname(__FILE__) + '/lib/server/default_config.rb'
 require File.dirname(__FILE__) + '/config/config.rb'
 
 require File.dirname(__FILE__) + '/lib/server/handlers/handler.rb'
@@ -17,11 +18,15 @@ require File.dirname(__FILE__) + '/lib/server/handlers/argument_validation_handl
 require File.dirname(__FILE__) + '/lib/server/handlers/cache_handler.rb'
 require File.dirname(__FILE__) + '/lib/server/handlers/exception_handler.rb'
 require File.dirname(__FILE__) + '/lib/server/handlers/json_handler.rb'
+require File.dirname(__FILE__) + '/lib/server/handlers/queue_handler.rb'
 
 require File.dirname(__FILE__) + '/lib/server/server.rb'
 require File.dirname(__FILE__) + '/lib/server/route.rb'
 require File.dirname(__FILE__) + '/lib/server/route_manager.rb'
 require File.dirname(__FILE__) + '/lib/server/dsl.rb'
+require File.dirname(__FILE__) + '/lib/server/json_request.rb'
+require File.dirname(__FILE__) + '/lib/server/json_response.rb'
+
 
 
 
@@ -38,6 +43,7 @@ app = Rack::ShowExceptions.new Rack::Reloader.new Server::Server.new
 
 include Server::DSL
 
+require File.dirname(__FILE__) + "/lib/webservices/echo.rb"
 require File.dirname(__FILE__) + '/lib/webservices/audioscrobbler.rb'
 require File.dirname(__FILE__) + "/lib/webservices/musicbrainz.rb"
 require File.dirname(__FILE__) + "/lib/webservices/wikipedia.rb"

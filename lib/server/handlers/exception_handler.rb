@@ -2,7 +2,7 @@ module Server
   module Handlers
     
     class ExceptionHandler < Handler
-       def action(request, response)
+       def action(request, response, &block)
          begin
            yield request, response
          rescue Exception => e

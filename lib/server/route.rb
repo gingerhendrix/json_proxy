@@ -6,7 +6,7 @@ module Server
      def initialize(namespace, name, arg_names, options={}, block = Proc.new)
       @name = name
       @namespace = namespace
-      @options = options
+      @options = {:cache => true, :cache_key => Proc.new { |args| args.join("_") } }.merge(options);
       @block = block
       @options[:arg_names] = arg_names
      end
@@ -16,8 +16,9 @@ module Server
           ExceptionHandler.new(@namespace, @name, @options).action(request, response) do |request, response|
             ArgumentValidationHandler.new(@namespace, @name, @options).action(request, response) do |request, response|
               CacheHandler.new(@namespace, @name, @options).action(request, response) do |request, response|
-                QueueHandler.new(@namespace, @name, @options) do |request, response|
+                QueueHandler.new(@namespace, @name, @options).action(request, response) do |request, response|
                     response.body = @block.call(*request.args)
+                    puts "Response.body = " + response.body.to_s + " \n"
                 end
               end
             end
