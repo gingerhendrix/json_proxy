@@ -9,7 +9,13 @@ module Server
      
      def force?
       !self['force'].nil?
-    end
+     end
+     
+     alias_method :_old_url, :url
+      
+     def url(options={})
+      _old_url + "&force=true"
+     end
 
   end
 end

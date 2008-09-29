@@ -6,9 +6,13 @@ module UrlQueue
     end
     
     def process
+      @processed = 0
       while url = @q.get
+        puts "Fetching #{url} \n"
         fetch url
+        @processed += 1
       end
+      @processed
     end
     
     private

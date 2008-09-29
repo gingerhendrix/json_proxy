@@ -47,10 +47,23 @@ describe "Server" do
     
     describe "with uncached message" do
     
-      it "response should be 202 - Processing " do
+      it "response should be 202 - Processing until complete then success" do
         msg = random_msg
         response = get(msg)
         response.code.should == "202"
+        count = 1;
+        maxCount = 10;
+        while response = get(msg)
+          puts "Retry #{count} \n"
+          if (response.code != "202" || count > maxCount)
+            break
+          end
+          count += 1
+          sleep(1)
+        end
+        response.code.should == "200"
+        body = ActiveSupport::JSON.decode(response.body)
+        body['message'].should == msg 
       end
    
     end

@@ -27,7 +27,7 @@ require File.dirname(__FILE__) + '/lib/server/dsl.rb'
 require File.dirname(__FILE__) + '/lib/server/json_request.rb'
 require File.dirname(__FILE__) + '/lib/server/json_response.rb'
 
-
+require File.dirname(__FILE__) + '/lib/queue/queue.rb'
 
 
 require File.dirname(__FILE__) + '/lib/utils/couch_cache.rb'
