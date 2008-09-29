@@ -1,0 +1,66 @@
+= Readme
+
+Json Proxy is a small server/dsl intending for serving JSON documents, and in particular JSON documents created from external webservices.
+JsonProxy supports
+  * Caching - with either CouchDb or a simple Filesystem based cache
+  * Asynchronous Operation - Json Proxy supports asynchronous data loading via a HTTP polling mechanism
+
+== Prequisites
+
+* Couchdb (For caching, alternative FileCache exists)
+* Starling (For queue)
+* Rack (For server)
+
+== DSL
+
+The JsonProxy DSL is used for creating new services
+
+  np_namespace "echo" do |ns|
+    ns.route 'echo', [:message] do |message|
+      {:message => message}
+    end
+  end
+
+Each route should return an object with a #to_json method.
+
+== Cache
+
+All queries are cached, the cache can be controlled by setting the cache_expiry and cache_key options.
+
+== JSON Envelope
+
+The response is always a JSON object, this object is an envelope around the data.  
+The data can be accessed through the data property of the response, the other properties
+ of the response are used for meta-information such as the response code and response message.
+
+  http://localhost/echo/echo?message=blah&jsonp=callback  
+    => {status : 200, statusMessage : "Ok", data : {message : "blah" } }
+
+  
+== JSON-P 
+
+If the request has an argument 'jsonp' the server will prefix the response with the argument value, allowing the 
+response to be used to trigger callbacks.
+
+  http://localhost/echo/echo?message=blah&jsonp=callback  
+    => callback({status : 200, statusMessage : "Ok", data : {message : "blah" } })   
+
+== Asynchronous Operation
+
+JSON Proxy supports asynchronous operation by returning immediately if the data is not in the cache.  
+The server returns a 202 status code in this scenario.  The operation is then performed in the background, 
+while the client polls the server.  Once the operation has completed the data will be available in the cache and will be
+sent to the client on the next request.
+
+  Loop while status is 202
+    http://localhost/echo/echo?message=blah  
+      => {status : 202, statusMessage : "Processing. Please retry shortly" }
+  end
+  http://localhost/echo/echo?message=blah  
+    => {status : 200, statusMessage : "Ok", data : {message : "blah" } } 
+  
+Background processing is performed by using a shared queue (implemented using starling).  When a cache miss occurs the 
+server adds the current url to a queue including an extra force parameter.  The QueueDaemon gets urls from the queue and 
+fetches them.  The force parameter ensures that the operation is processed synchronously.
+
+
