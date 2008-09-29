@@ -2,8 +2,8 @@
 
 Json Proxy is a small server/dsl intending for serving JSON documents, and in particular JSON documents created from external webservices.
 JsonProxy supports
-  * Caching - with either CouchDb or a simple Filesystem based cache
-  * Asynchronous Operation - Json Proxy supports asynchronous data loading via a HTTP polling mechanism
+* Caching - with either CouchDb or a simple Filesystem based cache
+* Asynchronous Operation - Json Proxy supports asynchronous data loading via a HTTP polling mechanism
 
 == Prequisites
 
@@ -31,7 +31,7 @@ All queries are cached, the cache can be controlled by setting the cache_expiry 
 
 The response is always a JSON object, this object is an envelope around the data.  
 The data can be accessed through the data property of the response, the other properties
- of the response are used for meta-information such as the response code and response message.
+of the response are used for meta-information such as the response code and response message.
 
   http://localhost/echo/echo?message=blah&jsonp=callback  
     => {status : 200, statusMessage : "Ok", data : {message : "blah" } }
