@@ -2,6 +2,12 @@ module Server
   module Handlers
   
     class QueueHandler < Handler
+    
+      def initialize(name, namespace, options)
+        super name, namespace, options
+        @queue = UrlQueue::UrlQueue.new        
+      end
+    
       #TODO
       # 
       # If 'force' is not specified add to queue and set status to '202 - Processing' and return
@@ -13,10 +19,9 @@ module Server
           puts "QueueHandler: Forced request - yielding \n"
           yield request, response
         else
-          response.status = "202"
+          response.status = 202
           response.message = "Processing.  Please retry your request shortly"
-          #Add to queue.
-          #queue.add(request)
+          @queue.add request.url({:force => true })
         end
       end
     
