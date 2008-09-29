@@ -8,8 +8,8 @@ np_namespace "audioscrobbler" do |ns|
     user
   end
 
-  ns.route 'recent_tracks', [:username], {:cache => false } do |username|
-    Scrobbler::User.new(username).recent_tracks
+  ns.route 'recent_tracks', [:username], :cache_expiry => 30 do |username| 
+   {:recent_tracks => Scrobbler::User.new(username).recent_tracks }
   end
   
   ns.route 'album_info', [:artist, :album]  do |artist, album|

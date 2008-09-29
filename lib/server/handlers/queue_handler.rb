@@ -15,7 +15,7 @@ module Server
       # Also need to modify CacheHandler to not save after yield unless force
       # And modify JsonHandler to use data envelope 
       def action(request, response, &block)
-        if request.force?
+        if request.force? 
           puts "QueueHandler: Forced request - yielding \n"
           yield request, response
         else
