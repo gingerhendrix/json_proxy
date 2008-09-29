@@ -39,7 +39,8 @@ require File.dirname(__FILE__) + '/vendor/gems/mbleigh-ruby-github-0.0.4/lib/rub
 require File.dirname(__FILE__) + '/vendor/gems/rbrainz-0.4.0/lib/rbrainz.rb'
 require File.dirname(__FILE__) + '/vendor/gems/discogs-1.0.0/lib/discogs.rb'
 
-app = Rack::ShowExceptions.new Rack::Reloader.new Server::Server.new 
+# Rack::ShowExceptions.new
+app = Rack::Reloader.new Server::Server.new 
 
 include Server::DSL
 

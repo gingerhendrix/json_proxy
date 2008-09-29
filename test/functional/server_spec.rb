@@ -39,7 +39,10 @@ describe "Server" do
         response = get("cached")
         response.code.should == "200"
         body = ActiveSupport::JSON.decode(response.body)
-        body['message'].should == "cached" 
+        body.should be :kind_of, Hash
+        body['status'].should == 200
+        body['data'].should be :kind_of, Hash
+        body['data']['message'].should == "cached" 
  
       end
    
@@ -51,6 +54,10 @@ describe "Server" do
         msg = random_msg
         response = get(msg)
         response.code.should == "202"
+        response.body.should_not be(:empty)
+        body = ActiveSupport::JSON.decode(response.body)
+        body.should be :kind_of, Hash
+        body['status'].should == 202
         count = 1;
         maxCount = 10;
         while response = get(msg)
@@ -63,7 +70,9 @@ describe "Server" do
         end
         response.code.should == "200"
         body = ActiveSupport::JSON.decode(response.body)
-        body['message'].should == msg 
+        body['status'].should == 200
+        body['data'].should be :kind_of, Hash
+        body['data']['message'].should == msg 
       end
    
     end
@@ -75,7 +84,9 @@ describe "Server" do
         response = force_get(msg)
         response.code.should == "200"
         body = ActiveSupport::JSON.decode(response.body)
-        body['message'].should == msg 
+        body['status'].should == 200
+        body['data'].should be :kind_of, Hash
+        body['data']['message'].should == msg 
       end
     
     end

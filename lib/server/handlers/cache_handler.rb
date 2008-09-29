@@ -16,7 +16,7 @@ module Server
             end
           else
             puts "Cache Hit #{@namespace.downcase}_#{@name.downcase}  #{key} \n"
-            response.body = result
+            response.body = ActiveSupport::JSON.decode result
           end
         else
           puts "Cache Skip #{@namespace.downcase}_#{@name.downcase} \n"

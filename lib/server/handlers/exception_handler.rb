@@ -9,7 +9,7 @@ module Server
            puts "Exception: #{e} \n"
            pp e.backtrace 
            puts "\n"
-           response.body = {:error => "Error: " + e }
+           response.errors.push :error => "Error: #{e}"
          end
        end
     end
