@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <link rel="stylesheet" href="stylesheets/screen.css" type="text/css" media="screen" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+      Json Proxy 0.5.0
+  </title>
+  <script src="javascripts/rounded_corners_lite.inc.js" type="text/javascript"></script>
+<style>
+
+</style>
+  <script type="text/javascript">
+    window.onload = function() {
+      settings = {
+          tl: { radius: 10 },
+          tr: { radius: 10 },
+          bl: { radius: 10 },
+          br: { radius: 10 },
+          antiAlias: true,
+          autoPad: true,
+          validTags: ["div"]
+      }
+      var versionBox = new curvyCorners(settings, document.getElementById("version"));
+      versionBox.applyCornersToAll();
+    }
+  </script>
+</head>
+<body>
+<div id="main">
+
+    <h1>Json Proxy 0.5.0</h1>
+    <div id="version" class="clickable" onclick='document.location = "http://rubyforge.org/projects/json_proxy"; return false'>
+      <p>Get Version</p>
+      <a href="http://rubyforge.org/projects/json_proxy" class="numbers">0.5.0</a>
+    </div>
+    <div class="body">
+      <h1>Readme</h1>
+<p>
+Json Proxy is a small server/dsl intending for serving JSON documents, and
+in particular JSON documents created from external webservices. JsonProxy
+supports
+</p>
+<ul>
+<li>Caching - with either CouchDb or a simple Filesystem based cache
+
+</li>
+<li>Asynchronous Operation - Json Proxy supports asynchronous data loading via
+a HTTP polling mechanism
+
+</li>
+</ul>
+<h2>Prequisites</h2>
+<ul>
+<li>Couchdb (For caching, alternative FileCache exists)
+
+</li>
+<li>Starling (For queue)
+
+</li>
+<li>Rack (For server)
+
+</li>
+</ul>
+<h2>DSL</h2>
+<p>
+The JsonProxy DSL is used for creating new services
+</p>
+<pre>
+  np_namespace &quot;echo&quot; do |ns|
+    ns.route 'echo', [:message] do |message|
+      {:message =&gt; message}
+    end
+  end
+</pre>
+<p>
+Each route should return an object with a #to_json method.
+</p>
+<h2>Cache</h2>
+<p>
+All queries are cached, the cache can be controlled by setting the
+cache_expiry and cache_key options.
+</p>
+<h2>JSON Envelope</h2>
+<p>
+The response is always a JSON object, this object is an envelope around the
+data. The data can be accessed through the data property of the response,
+the other properties of the response are used for meta-information such as
+the response code and response message.
+</p>
+<pre>
+  http://localhost/echo/echo?message=blah&amp;jsonp=callback
+    =&gt; {status : 200, statusMessage : &quot;Ok&quot;, data : {message : &quot;blah&quot; } }
+</pre>
+<h2>JSON-P</h2>
+<p>
+If the request has an argument &#8216;jsonp&#8217; the server will prefix
+the response with the argument value, allowing the response to be used to
+trigger callbacks.
+</p>
+<pre>
+  http://localhost/echo/echo?message=blah&amp;jsonp=callback
+    =&gt; callback({status : 200, statusMessage : &quot;Ok&quot;, data : {message : &quot;blah&quot; } })
+</pre>
+<h2>Asynchronous Operation</h2>
+<p>
+JSON Proxy supports asynchronous operation by returning immediately if the
+data is not in the cache. The server returns a 202 status code in this
+scenario. The operation is then performed in the background, while the
+client polls the server. Once the operation has completed the data will be
+available in the cache and will be sent to the client on the next request.
+</p>
+<pre>
+  Loop while status is 202
+    http://localhost/echo/echo?message=blah
+      =&gt; {status : 202, statusMessage : &quot;Processing. Please retry shortly&quot; }
+  end
+  http://localhost/echo/echo?message=blah
+    =&gt; {status : 200, statusMessage : &quot;Ok&quot;, data : {message : &quot;blah&quot; } }
+</pre>
+<p>
+Background processing is performed by using a shared queue (implemented
+using starling). When a cache miss occurs the server adds the current url
+to a queue including an extra force parameter. The QueueDaemon gets urls
+from the queue and fetches them. The force parameter ensures that the
+operation is processed synchronously.
+</p>
+    
+    </div>
+
+    <p class="coda">
+      <a href="FIXME email">Gareth Andrew</a>, 29th September 2008<br>
+      Theme extended from <a href="http://rb2js.rubyforge.org/">Paul Battley</a> and <a href="http://newgem.rubyforge.org/">Dr. Nic</a>
+    </p>
+</div>
+
+<!-- insert site tracking codes here, like Google Urchin -->
+
+</body>
+</html>
