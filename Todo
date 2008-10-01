@@ -1,0 +1,17 @@
+== Todo
+
+=== 0.5
+* Start queue daemon with server
+* Create separate executable for starting queue runner by itself
+* Functional spec helper should create server and queue runner and set up config.
+* Add rake tasks for running functional and specs
+* Add rake tasks for deployment (gandrew.com and rubyforge)
+* Tag and release 0.5
+
+=== 0.6
+* Refactor server to have saner hierarchy - under JsonProxy module
+* Refactor DSL under JsonProxy module remove 'include Server::DSL'
+
+=== 1.0
+* Add conditional get support to server
+
