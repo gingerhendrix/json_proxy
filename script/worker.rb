@@ -1,5 +1,7 @@
 require 'rubygems'
 
+require 'net/http'
+
 require File.dirname(__FILE__) + '/../lib/queue/queue'
 require File.dirname(__FILE__) + '/../lib/queue/queue_daemon'
 
