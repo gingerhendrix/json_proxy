@@ -1,0 +1,78 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'rack'
+require 'activesupport'
+require 'configatron'
+require 'choice'
+
+require File.dirname(__FILE__) + '/../lib/json_proxy.rb'
+
+
+Choice.options do
+
+  footer ''
+  footer '  Example: json_proxy -p 8080 -c config/config.rb --config=lib/*.rb'
+  footer ''
+
+  
+  option :port do
+    short '-p'
+    long '--port=PORT'
+    desc 'The default port to listen on (default 4567)'
+    cast Integer
+    default 4567
+  end
+  
+  option :config do
+    short '-c'
+    long '--config=CONFIG'
+    desc 'Specify the configuration file'
+  end
+  
+  option :services do
+    short '-s'
+    long '--services=*SERVICES'
+    desc 'Specify the services you would like to run'
+  end
+
+  option :help do
+    long '--help'
+    desc 'Show this message'
+  end
+
+  option :version do
+    short '-v'
+    long '--version'
+    desc 'Show version'
+    action do
+      puts "#{JsonProxy::NAME}-#{JsonProxy::VERSION}"
+      exit
+    end
+  end
+end
+
+if Choice.choices[:config] 
+  require Choice.choices[:config]
+end
+
+if Choice.choices[:services] 
+  include Server::DSL
+  Choice.choices[:services].each do |service|
+    require service
+  end
+end
+
+
+
+# Rack::ShowExceptions.new
+app = Rack::Reloader.new Server::Server.new 
+
+Rack::Handler::Mongrel.run(app, :Port => Choice.choices[:port]) do |server|
+  puts "==  json_proxy running on port #{Choice.choices[:port]}"
+  trap("INT") do
+    puts "\n== Good night."
+    exit()
+  end
+end
+

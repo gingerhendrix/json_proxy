@@ -8,6 +8,14 @@ module JsonProxy
   NAME = "json_proxy"
 end
 
+# Hack to stop JSON library interfering with activesupport's json facilities
+#
+module JSON
+  def self.parse(json)
+    ActiveSupport::JSON.decode(json)
+  end
+end
+
 require 'server/default_config.rb'
 
 require 'server/handlers/handler.rb'
