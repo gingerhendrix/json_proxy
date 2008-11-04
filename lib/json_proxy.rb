@@ -33,7 +33,7 @@ require 'server/json_request.rb'
 require 'server/json_response.rb'
 
 require 'queue/queue.rb'
-
+require 'queue/queue_daemon.rb'
 
 require 'utils/couch_cache.rb'
 require 'utils/couch_server.rb'
