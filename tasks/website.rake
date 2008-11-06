@@ -40,7 +40,7 @@ task :website_generate => :ruby_env do
 
   title= "Json Proxy #{JsonProxy::VERSION}"
   version = JsonProxy::VERSION
-  download = "http://rubyforge.org/projects/json_proxy"
+  download = "http://rubyforge.org/projects/json-proxy"
   
   stat = File.stat(src)
   created = stat.ctime
@@ -52,13 +52,34 @@ task :website_generate => :ruby_env do
 
 end
 
-desc 'Upload website files to rubyforge'
-task :website_upload do
-  host = "#{rubyforge_username}@rubyforge.org"
-  remote_dir = "/var/www/gforge-projects/#{PATH}/"
-  local_dir = 'website'
-  sh %{rsync -aCv #{local_dir}/ #{host}:#{remote_dir}}
+desc 'Upload website files to gandrew.com'
+remote_task :website_upload, :roles => [:app] do
+ 
+  date_stamp = Time.now.strftime("%Y%m%d")
+  last_release = run("ls #{DEPLOY_ROOT}/rels | sort -r | head -n 1").chomp
+
+  if last_release =~ /#{date_stamp}\-(\d+)/
+      serial = $1.to_i + 1
+  else
+      serial = 0 
+  end
+
+  rel = ("%d-%02d" % [date_stamp, serial])
+  rel_dir = "#{DEPLOY_ROOT}/rels/#{rel}"
+  
+  run "sudo mkdir -p #{rel_dir}"
+  run "sudo chown ga:ga #{rel_dir}"
+  rsync 'website/', "#{rel_dir}/"
+  run "sudo ln -s -f -T #{rel_dir} #{DEPLOY_ROOT}/current"
 end
 
+desc "Upload website files to rubyforge"
+task :website_rubyforge do
+  cd "website"
+  sh "scp -r . rubyforge.org:#{RUBYFORGE_ROOT}"
+  cd ".."
+end
+
+
 desc 'Generate and upload website files'
-task :website => [:website_generate, :website_upload, :publish_docs]
+task :website => [:website_generate, :website_upload, :website_rubyforge]
