@@ -14,7 +14,7 @@ module Server
             cacheObj = Hash.new      
             cacheObj['mtime'] = Time.new.to_i
             cacheObj['ctime'] = Time.new.to_i
-            cacheObj['app_version'] = 1
+            cacheObj['app_version'] = JsonProxy::APP_VERSION
             cacheObj['data'] = response.body
             puts "Forced query - Storing result #{cacheObj.to_json}\n"
             cache.store key, cacheObj.to_json
@@ -30,7 +30,7 @@ module Server
               cacheObj['mtime'] = Time.new.to_i
               cacheObj['_rev'] = result['_rev']
               cacheObj['_id'] = result['_id']
-              cacheObj['app_version'] = 1
+              cacheObj['app_version'] = JsonProxy::APP_VERSION
               cacheObj['data'] = response.body
               puts "Forced query - Storing result #{cacheObj.to_json}\n"
               cache.store key, cacheObj.to_json
@@ -50,7 +50,7 @@ module Server
           return true
          elsif result['app_version'].nil?
           return true
-         elsif result['app_version'] < 1 
+         elsif result['app_version'] < JsonProxy::APP_VERSION
           return true
          else
           return false
