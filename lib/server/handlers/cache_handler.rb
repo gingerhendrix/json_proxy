@@ -21,7 +21,7 @@ module Server
           end
         else
           puts "Result #{result}\n"
-          result =  ActiveSupport::JSON.decode result
+          result =  JSON.parse result
           if expired?(result)
             puts "Cache Expired:  mtime: #{result['mtime']} version: #{result['app_version']} \n"
             yield request, response
