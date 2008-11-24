@@ -1,6 +1,9 @@
 require 'rubygems'
 require 'rack'
 require 'activesupport'
+require 'json'
+require 'json/add/core' #Converters for date, time, range etc
+require 'json/add/rails' #Basic converter for object
 require 'configatron'
 
 module JsonProxy
@@ -8,13 +11,6 @@ module JsonProxy
   NAME = "json_proxy"
 end
 
-# Hack to stop JSON library interfering with activesupport's json facilities
-#
-module JSON
-  def self.parse(json)
-    ActiveSupport::JSON.decode(json)
-  end
-end
 
 require 'server/default_config.rb'
 
