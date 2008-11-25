@@ -8,7 +8,7 @@ module Server
         key = @options[:cache_key].call(*request.args)
         result = cache.fetch key
         if result.nil? 
-          puts "Cache Miss #{@namespace.downcase}_#{@name.downcase}  #{key} \n"
+          #puts "Cache Miss #{@namespace.downcase}_#{@name.downcase}  #{key} \n"
           yield request, response
           if request.force?
             cacheObj = Hash.new      
@@ -16,31 +16,44 @@ module Server
             cacheObj['ctime'] = Time.new.to_i
             cacheObj['app_version'] = JsonProxy::APP_VERSION
             cacheObj['data'] = response.body
-            puts "Forced query - Storing result #{cacheObj.to_json}\n"
+            #puts "Forced query - Storing result #{cacheObj.to_json}\n"
             cache.store key, cacheObj.to_json
           end
         else
-          puts "Result #{result}\n"
+          #puts "Result #{result}\n"
           result =  JSON.parse result
           if expired?(result)
-            puts "Cache Expired:  mtime: #{result['mtime']} version: #{result['app_version']} \n"
+            #puts "Cache Expired:  mtime: #{result['mtime']} version: #{result['app_version']} \n"
             yield request, response
             if request.force?      
               cacheObj = Hash.new      
+              cacheObj['ctime'] = result['ctime']
               cacheObj['mtime'] = Time.new.to_i
               cacheObj['_rev'] = result['_rev']
               cacheObj['_id'] = result['_id']
               cacheObj['app_version'] = JsonProxy::APP_VERSION
               cacheObj['data'] = response.body
-              puts "Forced query - Storing result #{cacheObj.to_json}\n"
+              #puts "Forced query - Storing result #{cacheObj.to_json}\n"
               cache.store key, cacheObj.to_json
             end
 
           else
-            puts "Cache Hit #{@namespace.downcase}_#{@name.downcase}  #{key} \n"
+            #puts "Cache Hit #{@namespace.downcase}_#{@name.downcase}  #{key} \n"
             response.body = result['data']  
           end
         end
+      end
+      
+      def update_cache(key, cacheObj, response)
+      
+      end
+      
+      def add_to_cache(key, cacheObj, response)
+      
+      end
+      
+      def remove_from_cache(key)
+      
       end
       
       def expired?(result)

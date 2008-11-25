@@ -1,7 +1,9 @@
-require File.dirname(__FILE__) + '/spec_helper'
-
+require 'rubygems'
 require 'net/http'
 require 'active_support'
+
+require File.dirname(__FILE__) + '/spec_helper'
+
 # Test basic server operation using echo server
 
 describe "Server" do
