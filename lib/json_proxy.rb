@@ -1,9 +1,9 @@
 require 'rubygems'
 require 'rack'
-require 'activesupport'
 require 'json'
 require 'json/add/core' #Converters for date, time, range etc
 require 'json/add/rails' #Basic converter for object
+require 'activesupport'
 
 require 'configatron'
 

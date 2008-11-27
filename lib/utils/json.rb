@@ -11,3 +11,12 @@ class Object
   end
 
 end
+
+class Array
+
+
+  def to_json(*a)
+    "[#{map { |value| ActiveSupport::JSON.encode(value) } * ', '}]"
+  end
+  
+end
