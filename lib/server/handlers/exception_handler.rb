@@ -1,3 +1,5 @@
+require 'pp'
+
 module Server
   module Handlers
     
@@ -7,7 +9,7 @@ module Server
            yield request, response
          rescue Exception => e
            puts "Exception: #{e} \n"
-           pp e.backtrace 
+           pp  e.backtrace 
            puts "\n"
            response.errors.push :error => "Error: #{e}"
          end

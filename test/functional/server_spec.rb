@@ -7,6 +7,44 @@ require File.dirname(__FILE__) + '/spec_helper'
 # Test basic server operation using echo server
 
 describe "Server" do
+
+  def start_server
+    app = Server::Server.new 
+    Thread.new {
+       @acc = Rack::Handler::Mongrel.run(app, :Port => 4567) do |server|
+        puts "Server running"     
+       end
+     }
+    sleep 2
+    
+  end
+  
+  def start_worker
+    Thread.new {
+      puts "Worker Started"
+      worker = UrlQueue::QueueDaemon.new
+      sleeping = false
+      loop do
+        processed = worker.process
+        if processed == 0 && !sleeping
+          sleeping = true
+          puts "Queue empty \n"
+        elsif processed > 0
+          puts "Processed #{processed}\n"
+          sleeping = false
+        end
+       sleep(1)
+      end
+    }
+    sleep 1
+  end
+
+  before(:all) do
+    start_server
+    start_worker
+  end
+  
+  
   before(:each) do
   end
   
@@ -45,7 +83,6 @@ describe "Server" do
         body['status'].should == 200
         body['data'].should be :kind_of, Hash
         body['data']['message'].should == "cached" 
- 
       end
    
     end

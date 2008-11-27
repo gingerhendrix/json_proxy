@@ -4,11 +4,10 @@ class Object
   def to_json(*a)
     result = {
     }
-    instance_variables.inject(result) do |r, name|
-      r[name[1..-1]] = instance_variable_get name
-      r
+    instance_variables.each do | name|
+      result[name[1..-1]] = instance_variable_get name
     end
-    result.to_json(*a)
+    result.to_json
   end
 
 end
