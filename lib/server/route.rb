@@ -20,8 +20,7 @@ module Server
             ArgumentValidationHandler.new(@namespace, @name, @options).action(request, response) do |request, response|
               CacheHandler.new(@namespace, @name, @options).action(request, response) do |request, response|
                 QueueHandler.new(@namespace, @name, @options).action(request, response) do |request, response|
-                    response.body = @block.call(*request.args)
-                    puts "Response.body = " + response.body.to_s + " \n"
+                  RouteHandler.new(@namespace, @name, @options, @block).action(request, response) 
                 end
               end
             end

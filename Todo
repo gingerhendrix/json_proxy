@@ -1,5 +1,6 @@
 == Todo
 
+
 === 0.5
 * Start queue daemon with server
 * Create separate executable for starting queue runner by itself
@@ -11,7 +12,18 @@
 === 0.6
 * Refactor server to have saner hierarchy - under JsonProxy module
 * Refactor DSL under JsonProxy module remove 'include Server::DSL'
+* Refactor server to eval route in context of RouteHandler object
+
+=== 0.7
+* Add internal get to support aggregate services
+
+
+=== 0.8
+* Fix the JSON mess permanently with a new JSON processing library - only needs to support string, hash and array
+* Add conditional get support to server
 
 === 1.0
-* Add conditional get support to server
+* More tests
+* More docs
+
 

@@ -24,6 +24,7 @@ require 'server/handlers/cache_handler.rb'
 require 'server/handlers/exception_handler.rb'
 require 'server/handlers/json_handler.rb'
 require 'server/handlers/queue_handler.rb'
+require 'server/handlers/route_handler.rb'
 
 require 'server/server.rb'
 require 'server/route.rb'
