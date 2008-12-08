@@ -1,4 +1,5 @@
 
+
 # Not needed but the test should be a little more robust this way
 class EchoResponse
   attr_accessor :message

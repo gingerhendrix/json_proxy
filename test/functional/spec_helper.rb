@@ -11,6 +11,4 @@ require File.dirname(__FILE__) + '/../../lib/queue/queue.rb'
 require File.dirname(__FILE__) + '/../../lib/queue/queue_daemon.rb'
 
 
-include Server::DSL
-require File.dirname(__FILE__) + '/../../lib/webservices/echo.rb'
 

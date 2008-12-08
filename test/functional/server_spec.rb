@@ -3,6 +3,10 @@ require 'net/http'
 require 'active_support'
 
 require File.dirname(__FILE__) + '/spec_helper'
+include Server::DSL
+require File.dirname(__FILE__) + '/test_service.rb'
+
+
 
 # Test basic server operation using echo server
 
