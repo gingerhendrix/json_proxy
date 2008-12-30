@@ -6,7 +6,8 @@ require 'activesupport'
 require 'configatron'
 require 'choice'
 
-require File.dirname(__FILE__) + '/../lib/json_proxy.rb'
+$:.unshift(File.dirname(__FILE__) + "/../lib") 
+require 'json_proxy'
 
 
 Choice.options do
@@ -50,6 +51,12 @@ Choice.options do
       exit
     end
   end
+  
+  option :workers do
+    short '-w'
+    long '--workers'
+    default 1
+  end
 end
 
 if Choice.choices[:config] 
@@ -64,15 +71,41 @@ if Choice.choices[:services]
 end
 
 
+appThread = Thread.new do
 
-# Rack::ShowExceptions.new
-app = Rack::Reloader.new Server::Server.new 
+  # Rack::ShowExceptions.new
+  app = Rack::Reloader.new Server::Server.new 
 
-Rack::Handler::Mongrel.run(app, :Port => Choice.choices[:port]) do |server|
-  puts "==  json_proxy running on port #{Choice.choices[:port]}"
-  trap("INT") do
-    puts "\n== Good night."
-    exit()
+  Rack::Handler::Mongrel.run(app, :Port => Choice.choices[:port]) do |server|
+    puts "==  json_proxy running on port #{Choice.choices[:port]}"
+    trap("INT") do
+      puts "\n== Good night."
+      exit()
+    end
+  end
+
+end
+
+workers = Choice.choices[:workers].to_i
+if workers > 0 
+  workers.times do 
+    
+    workerThread = Thread.new do
+      puts "Worker started"
+
+      loop do
+        processed = worker.process
+        if processed == 0 && !sleeping
+          sleeping = true
+      #    puts "Queue empty \n"
+        elsif processed > 0
+      #    puts "Processed #{processed}\n"
+          sleeping = false
+        end
+        sleep(1)
+      end
+    end
   end
 end
 
+appThread.join
