@@ -9,8 +9,10 @@ end
 require 'rake'
 require 'rake/clean'
 require 'rake/packagetask'
-require 'lib/json_proxy'
 require 'rake_remote_task'
+
+$:.unshift File.dirname(__FILE__) + "/lib"
+require 'json_proxy'
 
 $:.unshift File.dirname(__FILE__) + "/tasks/lib"
 

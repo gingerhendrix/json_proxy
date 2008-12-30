@@ -9,6 +9,7 @@
 * Tag and Release 
 
 === 0.5.1
+
 * Rename Server module to JsonProxy::Server or move into root JsonProxy module
 * Refactor DSL under JsonProxy module remove 'include Server::DSL'
 * Refactor server to eval route in context of RouteHandler object (DONE)
