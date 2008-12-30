@@ -1,29 +1,33 @@
 == Todo
 
-
-=== 0.5
+=== Chores
 * Start queue daemon with server
 * Create separate executable for starting queue runner by itself
-* Functional spec helper should create server and queue runner and set up config.
+* Functional spec helper should create server and queue runner and set up config. (Done)
 * Add rake tasks for running functional and specs
-* Add rake tasks for deployment (gandrew.com and rubyforge)
-* Tag and release 0.5
+* Add rake tasks for deployment (gem and website; gandrew.com and rubyforge)
+* Tag and Release 
+
+=== 0.5.1
+* Rename Server module to JsonProxy::Server or move into root JsonProxy module
+* Refactor DSL under JsonProxy module remove 'include Server::DSL'
+* Refactor server to eval route in context of RouteHandler object (DONE)
 
 === 0.6
-* Refactor server to have saner hierarchy - under JsonProxy module
-* Refactor DSL under JsonProxy module remove 'include Server::DSL'
-* Refactor server to eval route in context of RouteHandler object
+Aggregate services:
+* Add internal get 
+* Add response.partial= 
+
 
 === 0.7
-* Add internal get to support aggregate services
-
-
-=== 0.8
+* Add better error-handling for non-functional starling/couch
+* Add a decent logger and get rid of 'puts'
 * Fix the JSON mess permanently with a new JSON processing library - only needs to support string, hash and array
 * Add conditional get support to server
 
 === 1.0
 * More tests
 * More docs
+* Probably change name to Bonobo
 
 
