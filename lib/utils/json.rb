@@ -20,3 +20,11 @@ class Array
   end
   
 end
+
+class Exception
+
+  def to_json(*a)
+    "{ \"exception\" : \"#{self.to_s}\"}"
+  end
+
+end
