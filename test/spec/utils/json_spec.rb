@@ -33,9 +33,13 @@ describe "JSON" do
   end
   
   it "should correctly serialize an Exception" do
-    test_obj = StandardError.new
+    test_obj = StandardError.new "message"
+    backtrace = caller
+    test_obj.set_backtrace(backtrace)
     deserialized_obj = JSON.parse test_obj.to_json
-    deserialized_obj.should == {"exception" => "Message"}
+    deserialized_obj["name"].should == "StandardError"
+    deserialized_obj["message"].should == "message"
+    deserialized_obj["backtrace"].should == backtrace
   end
   
   it "should correctly serialize a hash containing an array" do

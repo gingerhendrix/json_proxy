@@ -14,9 +14,8 @@ end
 
 class Array
 
-
   def to_json(*a)
-    "[#{map { |value| ActiveSupport::JSON.encode(value) } * ', '}]"
+    "[" + (map { |value| value.to_json } * ', ') + "]"
   end
   
 end
@@ -24,7 +23,9 @@ end
 class Exception
 
   def to_json(*a)
-    "{ \"exception\" : \"#{self.to_s}\"}"
+    { :name => self.class.name,
+      :message => self.message,
+      :backtrace => self.backtrace}.to_json
   end
 
 end
