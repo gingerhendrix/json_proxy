@@ -8,7 +8,7 @@ require 'activesupport'
 require 'configatron'
 
 module JsonProxy
-  VERSION = '0.5.1'
+  VERSION = '0.5.2'
   NAME = "json_proxy"
   APP_VERSION = 2
 end
