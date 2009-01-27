@@ -69,9 +69,6 @@ describe "Server" do
     end
     
     it "response should be 202 - Processing until complete then 500" do
-       pending
-       return
-       
        msg = random_msg
        response = get(msg)
        response.code.should == "202"
@@ -89,11 +86,15 @@ describe "Server" do
           count += 1
           sleep(1)
         end
-        response.code.should == "200"
+        response.code.should == "500"
         body = ActiveSupport::JSON.decode(response.body)
         body['status'].should == 500
-        body['data'].should be :kind_of, Hash
-        body['data']['msg'].should == msg 
+        body['errors'].should be :kind_of, Array
+        body['errors'][0].should be_kind_of Hash
+        error = body['errors'][0]
+        error['name'].should == "StandardError"
+        error['message'].should == "message-#{msg}"        
+        error['backtrace'].should be_kind_of(Array)
     end
             
   end
