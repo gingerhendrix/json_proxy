@@ -23,7 +23,10 @@ module Server
             end
           else
             response.body = result['data']  
-            response.errors.concat result['errors']
+            if(result['errors'].length > 0)
+              response.errors.concat result['errors']
+              response.status = 500
+            end
           end
         end
       end

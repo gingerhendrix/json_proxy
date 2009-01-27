@@ -1,6 +1,8 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-
+#
+# TODO: OMGWTF - These tests smell worse than next door neighbours extractor vent.
+#
 describe "Cache Handler#action" do
 
 
@@ -21,8 +23,9 @@ describe "Cache Handler#action" do
     @response = mock("response")
     
     @errors = mock("errors")
+ 	   
     @response.stub!(:errors).and_return(@errors)
-
+    @response.stub!(:status=)
 
     @block_body = mock("block_body")
     @block_body.stub!(:yielded)
@@ -161,6 +164,13 @@ describe "Cache Handler#action" do
         @cacheObj.should_receive('[]').with('errors').and_return([:errors])
         @errors.should_receive(:concat).with([:errors])
         action
+      end
+      
+      it "should set the status to 500 if there are errors" do
+        @cacheObj.should_receive('[]').with('errors').and_return([:errors])
+        @response.should_receive('status=').with(500)
+        action
+
       end
       
       it "should not yield" do
