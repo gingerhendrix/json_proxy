@@ -19,6 +19,10 @@ describe "Cache Handler#action" do
     @request.stub!(:args)
     @request.stub!(:force?)
     @response = mock("response")
+    
+    @errors = mock("errors")
+    @response.stub!(:errors).and_return(@errors)
+
 
     @block_body = mock("block_body")
     @block_body.stub!(:yielded)
@@ -120,6 +124,7 @@ describe "Cache Handler#action" do
       @cacheObj = mock("cacheObj")
       @cacheObj.stub!('[]').with('data')
       @cacheObj.stub!('[]').with('mtime')
+      @cacheObj.stub!(:[]).with('errors').and_return([:errors])
       
       @handler.stub!(:expired?).and_return(false)
       @cache.stub!(:fetch).and_return("cacheJSON")
@@ -127,6 +132,7 @@ describe "Cache Handler#action" do
       JSON.stub!(:parse).with("cacheJSON").and_return(@cacheObj)
       
       @response.stub!(:body=)
+      @errors.stub!(:concat)
     end
   
     it "should parse JSON result" do
@@ -148,6 +154,12 @@ describe "Cache Handler#action" do
       it "should set the response" do
         @cacheObj.should_receive('[]').with('data').and_return(:data)
         @response.should_receive(:body=).with(:data)
+        action
+      end
+      
+      it "should combine the errors" do
+        @cacheObj.should_receive('[]').with('errors').and_return([:errors])
+        @errors.should_receive(:concat).with([:errors])
         action
       end
       

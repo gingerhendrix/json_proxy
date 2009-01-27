@@ -23,6 +23,7 @@ module Server
             end
           else
             response.body = result['data']  
+            response.errors.concat result['errors']
           end
         end
       end
