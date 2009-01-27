@@ -98,13 +98,17 @@ describe "Cache Handler#action" do
       
       it "should store result" do
         body = {}
+        errors = [StandardError.new]
         @response.should_receive(:body).and_return(body)
-
+        @response.should_receive(:errors).and_return(errors)
+        
         @cache.should_receive(:store).with("key", anything())  do |key , json|
           cacheObj = JSON.parse json
           cacheObj['mtime'].should be_kind_of(Numeric)
           cacheObj['ctime'].should be_kind_of(Numeric)
           cacheObj['app_version'].should be(JsonProxy::APP_VERSION)
+          cacheObj['errors'].should be_kind_of(Array)
+          cacheObj['data'].should be_kind_of(Hash)
         end
          action
       end
@@ -184,7 +188,11 @@ describe "Cache Handler#action" do
                
         it "should store result" do
           body = {}
+          errors = [StandardError.new]
+          
           @response.should_receive(:body).and_return(body)
+          @response.should_receive(:errors).and_return(errors)
+          
           @cacheObj.should_receive('[]').with('ctime').and_return("ctime")
           @cacheObj.should_receive('[]').with('_id').and_return("id")
           @cacheObj.should_receive('[]').with('_rev').and_return("rev")
@@ -196,6 +204,8 @@ describe "Cache Handler#action" do
             cacheObj['app_version'].should be(JsonProxy::APP_VERSION)
             cacheObj['_rev'].should =="rev"
             cacheObj['_id'].should =="id"
+            cacheObj['errors'].should be_kind_of(Array)
+            cacheObj['data'].should be_kind_of(Hash)
           end
            action
         end
