@@ -17,8 +17,12 @@ module Server
         # Can't work out if this modifies self's class (i.e. RouteHandler or self's virtual class)
         
         self.class.send(:define_method, :route, @block)
-
-        response.body = route *request.args
+        begin
+          response.body = route *request.args
+        rescue 
+          response.status = 500
+          response.errors << $!
+        end
       end
     
     end

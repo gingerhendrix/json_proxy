@@ -60,6 +60,7 @@ describe "RouteHandler#action" do
    action
  end
  
+ # Ugly test that tricky metdata hackery doesn't have unwanted side effects 
  it "should not alter handler2 " do
    action
    handler2 = Server::Handlers::RouteHandler.new @namespace, @name, @options, @block
@@ -67,6 +68,31 @@ describe "RouteHandler#action" do
    @handler.method(:route).should_not be_nil
  end
 
-
+  describe "when an exception is thrown" do
+    before(:each) do
+      @exception = RuntimeError.new
+      @block_body.stub!(:yielded).and_raise(@exception)
+      @response.stub!(:status=)
+      @response.stub!(:errors).and_return([])
+    end
+    
+  
+    it "should be caught" do
+      lambda{ action }.should_not raise_error
+    end
+    
+    it "should set staus to 500" do
+      @response.should_receive(:status=).with(500)
+      action
+    end
+    
+    it "should add exception to response.errors" do
+      errors = mock("errors")
+      @response.should_receive(:errors).and_return(errors)
+      errors.should_receive(:<<).with(@exception)
+      action
+    end
+  
+  end
 
 end
