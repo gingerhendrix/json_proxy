@@ -1,9 +1,5 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-require File.dirname(__FILE__) + '/../../../lib/queue/queue.rb'
-require File.dirname(__FILE__) + '/../../../lib/server/handlers/handler.rb'
-require File.dirname(__FILE__) + '/../../../lib/server/handlers/queue_handler.rb'
-
 describe  "QueueHandler#initialize" do
     it "should create a queue" do
       UrlQueue::UrlQueue.should_receive(:new)

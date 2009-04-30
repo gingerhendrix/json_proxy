@@ -2,7 +2,8 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 #
 # TODO: OMGWTF - These tests smell worse than next door neighbours extractor vent.
-#
+#              - The class under test is probably nearly as bad.
+#              - Sure you got enough mocks?
 describe "Cache Handler#action" do
 
 
