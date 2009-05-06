@@ -2,6 +2,7 @@
 == 0.6.0
 
 * Refactored functional tests to use cucumber
+* Removed 'puts' debug statements, and added 'Logging' based loggers
 
 == 0.5.2
 
