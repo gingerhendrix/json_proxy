@@ -11,6 +11,8 @@ require 'rake/clean'
 require 'rake/packagetask'
 require 'rake_remote_task'
 require 'spec/rake/spectask'
+require 'cucumber'
+require 'cucumber/rake/task'
 
 $:.unshift File.dirname(__FILE__) + "/lib"
 require 'json_proxy'
