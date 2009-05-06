@@ -4,7 +4,8 @@ Spec::Rake::SpecTask.new('test:spec') do |t|
   t.spec_files = FileList['test/spec/**/*.rb']
 end
 
-desc "Run functional tests"
-Spec::Rake::SpecTask.new('test:functional') do |t|
-  t.spec_files = FileList['test/functional/*_spec.rb']
+desc "Run cucumber tests"
+Cucumber::Rake::Task.new('test:acceptance') do |t|
+  t.cucumber_opts = "test/features --format pretty"
 end
+

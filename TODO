@@ -1,3 +1,4 @@
+
 == Todo
 
 === Next Milestone (0.6.0) 
@@ -6,7 +7,9 @@ Refactoring:
 
 * Rename Server module to JsonProxy::Server or move into root JsonProxy module
 * Refactor DSL under JsonProxy module remove 'include Server::DSL'
-* Refactor functional tests (ideally use cucumber)
+* Refactor functional tests (ideally use cucumber) (Done)
+* Rewrite rake gem:* to use jeweller
+* Add a decent logger and get rid of 'puts'
 
 Aggregate services:
 
@@ -24,8 +27,10 @@ Argument Validations:
 * Make services discoverable and self-documenting
 
 * Add better error-handling for non-functional starling/couch
-* Add a decent logger and get rid of 'puts'
 * Add conditional get support to server
+
+* Better cache handling
+* Better queue handling
 
 * More tests
 * More docs
