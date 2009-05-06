@@ -5,6 +5,8 @@ require 'json/add/core' #Converters for date, time, range etc
 require 'json/add/rails' #Basic converter for object
 require 'activesupport'
 
+require 'logging'
+
 require 'configatron'
 
 module JsonProxy
