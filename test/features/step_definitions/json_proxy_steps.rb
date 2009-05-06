@@ -30,18 +30,7 @@ def start_worker
   Thread.new {
     puts "Worker Started"
     worker = UrlQueue::QueueDaemon.new
-    sleeping = false
-    loop do
-      processed = worker.process
-      if processed == 0 && !sleeping
-        sleeping = true
-        puts "Queue empty \n"
-      elsif processed > 0
-        puts "Processed #{processed}\n"
-        sleeping = false
-      end
-     sleep(1)
-    end
+    worker.do_loop
   }
   sleep 1
 end
