@@ -5,7 +5,8 @@ module Server
     
       def initialize(name, namespace, options)
         super name, namespace, options
-        @queue = UrlQueue::UrlQueue.new        
+        @queue = UrlQueue::UrlQueue.new      
+        @log = Logging.logger[self]  
       end
     
       #TODO
@@ -16,7 +17,7 @@ module Server
       # And modify JsonHandler to use data envelope 
       def action(request, response, &block)
         if request.force? 
-          puts "QueueHandler: Forced request - yielding \n"
+          @log.info "QueueHandler: Forced request - yielding \n"
           yield request, response
         else
           response.status = 202
