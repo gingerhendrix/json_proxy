@@ -155,7 +155,15 @@ When /^the user polls the exception throwing service$/ do
 end
 
 Then /^the server should eventualy return an error response$/ do
-  pending
+  @response.code.should == "500"
+  body = ActiveSupport::JSON.decode(@response.body)
+  body['status'].should == 500
+  body['errors'].should be :kind_of, Array
+  body['errors'][0].should be_kind_of Hash
+  error = body['errors'][0]
+  error['name'].should == "StandardError"
+  error['message'].should == "message-#{@message}"        
+  error['backtrace'].should be_kind_of(Array)
 end
 
 
