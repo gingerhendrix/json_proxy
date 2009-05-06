@@ -1,2 +1,20 @@
 
 
+
+
+== 0.5.2
+
+* Fixed bug #9 - Exceptions in services are cached and returned to client (as status 500 responses) for debugging.
+
+
+== 0.5.1
+
+* Refactor server to eval route in context of RouteHandler object (DONE)
+* Start queue daemon with server (Done)
+* Create separate executable for starting queue runner by itself (Done)
+* Functional spec helper should create server and queue runner and set up config. (Done)
+* Add rake tasks for running functional and specs (Done)
+* Add rake tasks for deployment (gem and website; gandrew.com and rubyforge) (Done)
+* Tag and Release (Done)
+
+
