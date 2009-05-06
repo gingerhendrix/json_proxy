@@ -1,3 +1,7 @@
+Logging
+  Add logging dependency
+  Add per-class loggers
+  Convert all 'puts' to log statements
 
 == Todo
 
