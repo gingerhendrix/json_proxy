@@ -3,12 +3,13 @@ module UrlQueue
   class QueueDaemon
     def initialize
       @q = UrlQueue.new
+      @log = Logging.logger[self]
     end
     
     def process
       @processed = 0
       while url = @q.get
-        puts "Fetching #{url} \n"
+        @log.info "Fetching #{url} \n"
         fetch url
         @processed += 1
       end
@@ -21,9 +22,9 @@ module UrlQueue
         processed = process
         if processed == 0 && !sleeping
           sleeping = true
-          puts "Queue empty \n"
+          @log.info "Queue empty \n"
         elsif processed > 0
-          puts "Processed #{processed}\n"
+          @log.info "Processed #{processed}\n"
           sleeping = false
         end
         sleep(1)
