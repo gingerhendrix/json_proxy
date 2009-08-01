@@ -155,7 +155,25 @@ Then /^the server should eventualy return an error response$/ do
   error['backtrace'].should be_kind_of(Array)
 end
 
+Given /^a random message$/ do
+  @message = random_msg
+end
 
+When /^the user polls the "([^\"]*)" service$/ do |service|
+  poll do 
+    Net::HTTP.get_response(URI.parse("http://localhost:#{SERVER_PORT}/echo/#{service}.js?message=#{@message}"))
+  end
+end
+
+Then /^the server should return the double message$/ do
+  puts @response.body
+  @response.code.should == "200"
+  body = ActiveSupport::JSON.decode(@response.body)
+  body.should be :kind_of, Hash
+  body['status'].should == 200
+  body['data'].should be :kind_of, Hash
+  body['data']['message'].should == @message + "\n" + @message
+end
 
 
 

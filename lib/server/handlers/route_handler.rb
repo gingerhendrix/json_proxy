@@ -7,6 +7,17 @@ module Server
          super(name, namespace, options)
       end
       
+      def get(service, params={})
+        paramString = ""
+        sep = "?"
+        params.each do |key, value|
+          paramString += "#{sep}#{key}=#{value}"
+          sep = "&"
+        end
+        uri = URI.parse("http://#{@request.host}:#{@request.port}/#{@namespace}/#{service}.js"+paramString)
+        Net::HTTP.get_response(uri)
+      end
+      
       def action(request, response)
         @request = request
         @response = response

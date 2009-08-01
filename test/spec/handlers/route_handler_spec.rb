@@ -1,6 +1,32 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 
+describe "RouteHandler#get" do
+  before do
+    @handler = Server::Handlers::RouteHandler.new "namespace", "name", {} , Proc.new { }
+    @request = mock('request', :host => "HOST", :port => "PORT")
+    @handler.instance_variable_set('@request', @request)
+    URI.stub!(:parse).and_return(:uri)
+    Net::HTTP.stub!(:get_response).and_return(:response)
+  end
+  
+  it "should construct URI" do
+    URI.should_receive(:parse).with("http://HOST:PORT/namespace/service.js")
+    @handler.get('service')
+  end
+  
+  it "should construct URI with params" do
+    URI.should_receive(:parse).with("http://HOST:PORT/namespace/service.js?param2=value&param=value")
+    @handler.get('service', {:param => 'value', :param2 => 'value'})
+  end
+
+  
+  it "should call Net:HTTP" do
+    Net::HTTP.should_receive(:get_response).with(:uri).and_return(:response)
+    @handler.get('service').should == :response
+  end
+end
+
 describe "RouteHandler#action" do
 
 

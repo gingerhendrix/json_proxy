@@ -19,4 +19,15 @@ np_namespace "echo" do |ns|
     raise StandardError.new, "message-#{message}"
   end
   
+  ns.route 'double_echo', [:message] do |message|
+    response = get 'echo', :message => message
+    if response.code == "200"
+      #    body = ActiveSupport::JSON.decode(response.body)
+      #    msg = body['data']['message']
+      EchoResponse.new response.body
+    else
+      @response.partial!
+    end
+  end
+  
 end

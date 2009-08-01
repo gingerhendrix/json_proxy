@@ -8,12 +8,19 @@ Refactoring:
 * Refactor DSL under JsonProxy module remove 'include Server::DSL'
 * Refactor functional tests (ideally use cucumber) (Done)
 * Rewrite rake gem:* to use jeweller
-* Add a decent logger and get rid of 'puts'
+* Add a decent logger and get rid of 'puts' (Done)
 
 Aggregate services:
 
 * Add internal get 
-* Add response.partial= 
+    Write feature +done
+    Write feature steps +done
+    Write specs
+      route_handler#get should use Net:HTTP +done
+      cache_handler#action should yield if response.partial?
+    Write code to make specs pass
+* Add response.partial!
+* Add access to cached object in service 
 
 Argument Validations:
 
