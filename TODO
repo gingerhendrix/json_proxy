@@ -12,14 +12,14 @@ Refactoring:
 
 Aggregate services:
 
-* Add internal get 
+* Add internal get +done
     Write feature +done
     Write feature steps +done
-    Write specs
+    Write specs +done
       route_handler#get should use Net:HTTP +done
-      cache_handler#action should yield if response.partial?
-    Write code to make specs pass
-* Add response.partial!
+      cache_handler#action should yield if response.partial? +done
+    Write code to make specs pass +done
+    Add response.partial! +done
 * Add access to cached object in service 
 
 Argument Validations:

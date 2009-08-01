@@ -27,7 +27,8 @@ describe "Cache Handler#action" do
  	   
     @response.stub!(:errors).and_return(@errors)
     @response.stub!(:status=)
-
+    @response.stub!(:partial?)
+  
     @block_body = mock("block_body")
     @block_body.stub!(:yielded)
  end
@@ -83,7 +84,6 @@ describe "Cache Handler#action" do
 
     it "should check if the request is forced" do
       @request.should_receive(:force?)
-      
       action
     end
 
@@ -96,7 +96,6 @@ describe "Cache Handler#action" do
          @cache.should_not_receive(:store)
          action
       end
-      
     end
 
     describe "with forced request" do
@@ -126,8 +125,12 @@ describe "Cache Handler#action" do
   describe ", cache hit" do
     before(:each) do
       @cacheObj = mock("cacheObj")
+      @cacheObj.stub!('[]').with('partial')
       @cacheObj.stub!('[]').with('data')
       @cacheObj.stub!('[]').with('mtime')
+      @cacheObj.stub!('[]').with('ctime')
+      @cacheObj.stub!('[]').with('_rev')
+      @cacheObj.stub!('[]').with('_id')
       @cacheObj.stub!(:[]).with('errors').and_return([:errors])
       
       @handler.stub!(:expired?).and_return(false)
@@ -145,10 +148,14 @@ describe "Cache Handler#action" do
     end
   
     it "should check expiry" do
-
       @handler.should_receive(:expired?).with(@cacheObj)
       action
     end  
+    
+    it "should check if partial" do
+      @cacheObj.should_receive('[]').with('partial').and_return(false)
+      action
+    end
     
     describe "with unexpired cached result" do
       before(:each) do
@@ -180,7 +187,52 @@ describe "Cache Handler#action" do
       end
     
     end
-    
+
+    describe "with partial" do
+      before(:each) do
+         @cacheObj.stub!('[]').with('partial').and_return(true)
+      end
+        
+       it "should yield" do
+        @block_body.should_receive(:yielded).with(@request, @response)
+        action
+      end
+
+      it "should check if the request is forced" do
+        @request.should_receive(:force?)
+        action
+      end
+
+       describe "with unforced request" do
+        before(:each) do
+          @request.stub!(:force?).and_return(false)
+        end
+        
+        it "should not store result" do
+           @cache.should_not_receive(:store)
+           action
+        end
+      end
+      
+      
+      describe "with forced request" do
+       before(:each) do
+        @request.stub!(:force?).and_return(true)
+       end
+      
+      it "should store result" do
+        body = {}
+        errors = [StandardError.new]
+        @response.should_receive(:body).and_return(body)
+        @response.should_receive(:errors).and_return(errors)
+        
+        @cache.should_receive(:store).with("key", anything())
+        action
+      end
+    end
+      
+    end
+      
     describe "with expired cache result" do
       before(:each) do
          @handler.stub!(:expired?).and_return(true)

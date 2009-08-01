@@ -8,6 +8,14 @@ module Server
       @errors = []
     end
     
+    def partial?
+      !!@partial
+    end
+    
+    def partial!
+      @partial = true
+    end
+    
     def to_json
       { :status => self.status, 
         :statusMessage => self.message,

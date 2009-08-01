@@ -14,13 +14,13 @@ module Server
           add_to_cache response if request.force?
         else
           result =  JSON.parse result
-
-          if expired?(result)
+          if result['partial']
+            response.body = result['data']  
             yield request, response
-
-            if request.force?      
-              update_cache(result, response)
-            end
+            update_cache(result, response) if request.force?   
+          elsif expired?(result)
+            yield request, response
+            update_cache(result, response) if request.force?   
           else
             response.body = result['data']  
             if(result['errors'] && result['errors'].length > 0)
@@ -40,6 +40,7 @@ module Server
         cacheObj['app_version'] = JsonProxy::APP_VERSION
         cacheObj['errors'] = response.errors
         cacheObj['data'] = response.body
+        cacheObj['partial'] = response.partial?
         #puts "Forced query - Storing result #{cacheObj.to_json}\n"
         @cache.store @key, cacheObj.to_json
       end
@@ -51,6 +52,7 @@ module Server
         cacheObj['app_version'] = JsonProxy::APP_VERSION
         cacheObj['errors'] = response.errors
         cacheObj['data'] = response.body
+        cacheObj['partial'] = response.partial?
         #puts "Forced query - Storing result #{cacheObj.to_json}\n"
         @cache.store @key, cacheObj.to_json      
       end

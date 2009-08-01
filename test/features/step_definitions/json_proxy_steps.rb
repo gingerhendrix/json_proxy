@@ -166,7 +166,7 @@ When /^the user polls the "([^\"]*)" service$/ do |service|
 end
 
 Then /^the server should return the double message$/ do
-  puts @response.body
+#  puts @response.body
   @response.code.should == "200"
   body = ActiveSupport::JSON.decode(@response.body)
   body.should be :kind_of, Hash

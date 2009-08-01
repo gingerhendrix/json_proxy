@@ -22,9 +22,9 @@ np_namespace "echo" do |ns|
   ns.route 'double_echo', [:message] do |message|
     response = get 'echo', :message => message
     if response.code == "200"
-      #    body = ActiveSupport::JSON.decode(response.body)
-      #    msg = body['data']['message']
-      EchoResponse.new response.body
+      body = ActiveSupport::JSON.decode(response.body)
+      msg = body['data']['message']
+      EchoResponse.new msg + "\n" + msg 
     else
       @response.partial!
     end

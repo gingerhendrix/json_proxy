@@ -16,8 +16,8 @@ describe "RouteHandler#get" do
   end
   
   it "should construct URI with params" do
-    URI.should_receive(:parse).with("http://HOST:PORT/namespace/service.js?param2=value&param=value")
-    @handler.get('service', {:param => 'value', :param2 => 'value'})
+    URI.should_receive(:parse).with("http://HOST:PORT/namespace/service.js?param=value")
+    @handler.get('service', {:param => 'value'})
   end
 
   

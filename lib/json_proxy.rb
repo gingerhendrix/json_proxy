@@ -10,7 +10,7 @@ require 'logging'
 require 'configatron'
 
 module JsonProxy
-  VERSION = '0.5.2'
+  VERSION = '0.6.0'
   NAME = "json_proxy"
   APP_VERSION = 2
 end
