@@ -7,13 +7,10 @@ module Server
         raise "Invalid cache_key: should be a Proc" unless @options[:cache_key] && @options[:cache_key].is_a?(Proc)
         @key = @options[:cache_key].call(*request.args)
 
-        result = @cache.fetch @key
-
-        if result.nil? 
-          yield request, response
-          add_to_cache response if request.force?
-        else
-          result =  JSON.parse result
+        begin
+          #puts "Fetching #{@key}\n"
+          result = @cache.fetch @key
+          #puts "Result: " + result.inspect + "\n"
           if result['partial']
             response.body = result['data']  
             yield request, response
@@ -28,7 +25,13 @@ module Server
               response.status = 500
             end
           end
+          
+        rescue RestClient::ResourceNotFound => e
+           #puts "Cache miss!"
+           yield request, response
+           add_to_cache response if request.force?
         end
+        
       end
       
       def update_cache(result, response)
@@ -42,7 +45,7 @@ module Server
         cacheObj['data'] = response.body
         cacheObj['partial'] = response.partial?
         #puts "Forced query - Storing result #{cacheObj.to_json}\n"
-        @cache.store @key, cacheObj.to_json
+        @cache.store @key, cacheObj
       end
       
       def add_to_cache(response)
@@ -54,7 +57,7 @@ module Server
         cacheObj['data'] = response.body
         cacheObj['partial'] = response.partial?
         #puts "Forced query - Storing result #{cacheObj.to_json}\n"
-        @cache.store @key, cacheObj.to_json      
+        @cache.store @key, cacheObj
       end
       
       def remove_from_cache(key)

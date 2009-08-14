@@ -22,6 +22,7 @@ spec = Gem::Specification.new do |s|
   s.add_dependency        'starling',     '>= 0.9.8'
   s.add_dependency        'activesupport','>= 2.1.0'
   s.add_dependency        'logging','>= 1.1.2'
+  s.add_dependency        'couchrest','>= 0.33'
 
   s.files                 = ['History.txt', 'Rakefile', 'README.rdoc'] +
                             Dir.glob("{bin, lib,test, tasks}/**/*")

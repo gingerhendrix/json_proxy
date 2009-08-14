@@ -1,0 +1,3 @@
+Upgrade to latest couchdb 0.9.1 +done 
+  all tests still pssing +done
+Replace CouchServer with CouchRest

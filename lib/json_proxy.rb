@@ -4,7 +4,7 @@ require 'json'
 require 'json/add/core' #Converters for date, time, range etc
 require 'json/add/rails' #Basic converter for object
 require 'activesupport'
-
+require 'couchrest'
 require 'logging'
 
 require 'configatron'
