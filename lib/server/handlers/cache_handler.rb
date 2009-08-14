@@ -8,60 +8,20 @@ module Server
         @key = @options[:cache_key].call(*request.args)
 
         begin
-          #puts "Fetching #{@key}\n"
           result = @cache.fetch @key
-          #puts "Result: " + result.inspect + "\n"
-          if result['partial']
-            response.body = result['data']  
+          response.body = result['data']  
+          if result['partial'] || expired?(result)
             yield request, response
-            update_cache(result, response) if request.force?   
-          elsif expired?(result)
-            yield request, response
-            update_cache(result, response) if request.force?   
-          else
-            response.body = result['data']  
-            if(result['errors'] && result['errors'].length > 0)
-              response.errors.concat result['errors']
-              response.status = 500
-            end
+            @cache.update(result, response) if request.force?   
+          elsif(result['errors'] && result['errors'].length > 0)
+            response.errors.concat result['errors']
+            response.status = 500
           end
-          
         rescue RestClient::ResourceNotFound => e
            #puts "Cache miss!"
            yield request, response
-           add_to_cache response if request.force?
+           @cache.store(@key, response) if request.force?
         end
-        
-      end
-      
-      def update_cache(result, response)
-        cacheObj = Hash.new      
-        cacheObj['ctime'] = result['ctime']
-        cacheObj['mtime'] = Time.new.to_i
-        cacheObj['_rev'] = result['_rev']
-        cacheObj['_id'] = result['_id']
-        cacheObj['app_version'] = JsonProxy::APP_VERSION
-        cacheObj['errors'] = response.errors
-        cacheObj['data'] = response.body
-        cacheObj['partial'] = response.partial?
-        #puts "Forced query - Storing result #{cacheObj.to_json}\n"
-        @cache.store @key, cacheObj
-      end
-      
-      def add_to_cache(response)
-        cacheObj = Hash.new      
-        cacheObj['mtime'] = Time.new.to_i
-        cacheObj['ctime'] = Time.new.to_i
-        cacheObj['app_version'] = JsonProxy::APP_VERSION
-        cacheObj['errors'] = response.errors
-        cacheObj['data'] = response.body
-        cacheObj['partial'] = response.partial?
-        #puts "Forced query - Storing result #{cacheObj.to_json}\n"
-        @cache.store @key, cacheObj
-      end
-      
-      def remove_from_cache(key)
-      
       end
       
       def expired?(result)

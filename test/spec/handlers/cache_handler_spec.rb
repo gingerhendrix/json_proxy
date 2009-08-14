@@ -14,8 +14,11 @@ describe "Cache Handler#action" do
     @options.stub!('[]').with(:cache_key).and_return(Proc.new { "key" })
     @handler = Server::Handlers::CacheHandler.new @namespace, @name, @options
     
+    @cacheObj = mock("cacheObj")
+    @cacheObj.stub!("[]")
+    
     @cache = mock("cache")
-    @cache.stub!(:fetch)
+    @cache.stub!(:fetch).and_raise(RestClient::ResourceNotFound) #.and_return(@cacheObj)
     Utils::CouchCache.stub!(:new).and_return(@cache)
     
     @request = mock("request")
@@ -27,6 +30,7 @@ describe "Cache Handler#action" do
  	   
     @response.stub!(:errors).and_return(@errors)
     @response.stub!(:status=)
+    @response.stub!(:body=)
     @response.stub!(:partial?)
   
     @block_body = mock("block_body")
@@ -73,7 +77,7 @@ describe "Cache Handler#action" do
  
  describe ", cache miss" do
     before(:each) do
-      @cache.stub!(:fetch).and_return(nil)
+      @cache.stub!(:fetch).and_raise(RestClient::ResourceNotFound)
     end
 
     it "should yield" do
@@ -104,20 +108,8 @@ describe "Cache Handler#action" do
        end
       
       it "should store result" do
-        body = {}
-        errors = [StandardError.new]
-        @response.should_receive(:body).and_return(body)
-        @response.should_receive(:errors).and_return(errors)
-        
-        @cache.should_receive(:store).with("key", anything())  do |key , json|
-          cacheObj = JSON.parse json
-          cacheObj['mtime'].should be_kind_of(Numeric)
-          cacheObj['ctime'].should be_kind_of(Numeric)
-          cacheObj['app_version'].should be(JsonProxy::APP_VERSION)
-          cacheObj['errors'].should be_kind_of(Array)
-          cacheObj['data'].should be_kind_of(Hash)
-        end
-         action
+        @cache.should_receive(:store).with("key", @response)
+        action
       end
     end
   end
@@ -127,24 +119,13 @@ describe "Cache Handler#action" do
       @cacheObj = mock("cacheObj")
       @cacheObj.stub!('[]').with('partial')
       @cacheObj.stub!('[]').with('data')
-      @cacheObj.stub!('[]').with('mtime')
-      @cacheObj.stub!('[]').with('ctime')
-      @cacheObj.stub!('[]').with('_rev')
-      @cacheObj.stub!('[]').with('_id')
       @cacheObj.stub!(:[]).with('errors').and_return([:errors])
       
       @handler.stub!(:expired?).and_return(false)
-      @cache.stub!(:fetch).and_return("cacheJSON")
-      
-      JSON.stub!(:parse).with("cacheJSON").and_return(@cacheObj)
+      @cache.stub!(:fetch).and_return(@cacheObj)
       
       @response.stub!(:body=)
       @errors.stub!(:concat)
-    end
-  
-    it "should parse JSON result" do
-      JSON.should_receive(:parse).with("cacheJSON")
-      action
     end
   
     it "should check expiry" do
@@ -221,12 +202,8 @@ describe "Cache Handler#action" do
        end
       
       it "should store result" do
-        body = {}
-        errors = [StandardError.new]
-        @response.should_receive(:body).and_return(body)
-        @response.should_receive(:errors).and_return(errors)
-        
-        @cache.should_receive(:store).with("key", anything())
+
+        @cache.should_receive(:update).with(@cacheObj, @response)
         action
       end
     end
@@ -262,27 +239,8 @@ describe "Cache Handler#action" do
         end
                
         it "should store result" do
-          body = {}
-          errors = [StandardError.new]
-          
-          @response.should_receive(:body).and_return(body)
-          @response.should_receive(:errors).and_return(errors)
-          
-          @cacheObj.should_receive('[]').with('ctime').and_return("ctime")
-          @cacheObj.should_receive('[]').with('_id').and_return("id")
-          @cacheObj.should_receive('[]').with('_rev').and_return("rev")
-          
-          @cache.should_receive(:store).with("key", anything())  do |key , json|
-            cacheObj = JSON::Parser.new(json).parse #JSON.parse is stubbed
-            cacheObj['ctime'].should =="ctime"
-            cacheObj['mtime'].should be_kind_of(Numeric)
-            cacheObj['app_version'].should be(JsonProxy::APP_VERSION)
-            cacheObj['_rev'].should =="rev"
-            cacheObj['_id'].should =="id"
-            cacheObj['errors'].should be_kind_of(Array)
-            cacheObj['data'].should be_kind_of(Hash)
-          end
-           action
+          @cache.should_receive(:update).with(@cacheObj, @response)
+          action
         end
       end
     end
