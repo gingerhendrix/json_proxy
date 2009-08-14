@@ -1,6 +1,6 @@
 == Todo
 
-=== Next Milestone (0.6.0) 
+=== Next Milestone (0.6.x) 
 
 Refactoring:
 
@@ -20,17 +20,25 @@ Aggregate services:
       cache_handler#action should yield if response.partial? +done
     Write code to make specs pass +done
     Add response.partial! +done
+
 * Add access to cached object in service 
+** Add private storage to cache object to queries to maintain state
+
+CouchDB Views
+* Add support for couchdb views.
+  * Should bypass cache (no point caching in couch something that came directly from couch)
+  * Should have dependencies so we can update the view
 
 Argument Validations:
 
 * Add support for optional arguments
 
-
 === Future
 
 * Add support for custom argument validation
 * Make services discoverable and self-documenting
+
+* Upgrade couch to at least 0.9.0 and migrate to couchrest
 
 * Add better error-handling for non-functional starling/couch
 * Add conditional get support to server
