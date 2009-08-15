@@ -18,6 +18,10 @@ module Server
         Net::HTTP.get_response(uri)
       end
       
+      def database(namespace, name)
+         CouchRest.database!("http://#{configatron.couchdb.server}:#{configatron.couchdb.port}/#{namespace}_#{name}");
+      end
+      
       def action(request, response)
         @request = request
         @response = response
