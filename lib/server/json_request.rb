@@ -1,6 +1,7 @@
 module Server
   class JsonRequest < Rack::Request
      attr_accessor :args
+     attr_accessor :cached_response
      
      alias_method :orig_params, :params
      def params

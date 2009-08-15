@@ -4,23 +4,12 @@
 
 Refactoring:
 
-* Rename Server module to JsonProxy::Server or move into root JsonProxy module
-* Refactor DSL under JsonProxy module remove 'include Server::DSL'
 * Refactor functional tests (ideally use cucumber) (Done)
-* Rewrite rake gem:* to use jeweller
 * Add a decent logger and get rid of 'puts' (Done)
 
 Aggregate services:
 
 * Add internal get +done
-    Write feature +done
-    Write feature steps +done
-    Write specs +done
-      route_handler#get should use Net:HTTP +done
-      cache_handler#action should yield if response.partial? +done
-    Write code to make specs pass +done
-    Add response.partial! +done
-
 * Add access to cached object in service 
 ** Add private storage to cache object to queries to maintain state
 
@@ -29,16 +18,14 @@ CouchDB Views
   * Should bypass cache (no point caching in couch something that came directly from couch)
   * Should have dependencies so we can update the view
 
-Argument Validations:
-
-* Add support for optional arguments
-
 === Future
 
-* Add support for custom argument validation
-* Make services discoverable and self-documenting
+* Rewrite rake gem:* to use jeweller
+* Rename Server module to JsonProxy::Server or move into root JsonProxy module
+* Refactor DSL under JsonProxy module remove 'include Server::DSL'
 
-* Upgrade couch to at least 0.9.0 and migrate to couchrest
+* Add support for custom argument validation including optional arguments
+* Make services discoverable and self-documenting
 
 * Add better error-handling for non-functional starling/couch
 * Add conditional get support to server

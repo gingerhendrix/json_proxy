@@ -9,7 +9,10 @@ module Server
 
         begin
           result = @cache.fetch @key
+          
+          request.cached_response = result
           response.body = result['data']  
+          
           if result['partial'] || expired?(result)
             yield request, response
             @cache.update(result, response) if request.force?   

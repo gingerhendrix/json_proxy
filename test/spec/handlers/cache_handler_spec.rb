@@ -125,7 +125,13 @@ describe "Cache Handler#action" do
       @cache.stub!(:fetch).and_return(@cacheObj)
       
       @response.stub!(:body=)
+      @request.stub!(:cached_response=)
       @errors.stub!(:concat)
+    end
+  
+    it "should add the cached obj to the request" do
+      @request.should_receive(:cached_response=).with(@cacheObj)
+      action
     end
   
     it "should check expiry" do
