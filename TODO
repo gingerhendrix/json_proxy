@@ -2,4 +2,4 @@ Upgrade to latest couchdb 0.9.1 +done
   all tests still pssing +done
 Replace CouchServer with CouchRest +done
 Refactor some of cache code out of CacheHandler and into CouchCache +done
-Add access to cached object in request
+Add access to cached object in request +done

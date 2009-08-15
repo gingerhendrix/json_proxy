@@ -10,29 +10,31 @@ Refactoring:
 Aggregate services:
 
 * Add internal get +done
-* Add access to cached object in service 
-** Add private storage to cache object to queries to maintain state
-
-CouchDB Views
-* Add support for couchdb views.
-  * Should bypass cache (no point caching in couch something that came directly from couch)
-  * Should have dependencies so we can update the view
+* Add access to cached object in service +done
 
 === Future
 
+==== Refactoring
 * Rewrite rake gem:* to use jeweller
 * Rename Server module to JsonProxy::Server or move into root JsonProxy module
 * Refactor DSL under JsonProxy module remove 'include Server::DSL'
 
+==== Features
 * Add support for custom argument validation including optional arguments
 * Make services discoverable and self-documenting
+* Add support for couchdb views. (probably need to write a few more first)
+  * Should bypass cache (no point caching in couch something that came directly from couch)
+  * Should have dependencies so we can update the view
+  * Should be updateable (perhaps by a migrations style script)
 
+==== Stability/Performance
 * Add better error-handling for non-functional starling/couch
 * Add conditional get support to server
-
 * Better cache handling
 * Better queue handling
 
+===== Docs and stuff
+* Proper website (use jekyll_template)
 * More tests
 * More docs
 * Probably change name to Bonobo
