@@ -11,6 +11,7 @@ module Server
         else
           response.body = response_text;
         end
+        response["Content-Type"] = 'application/json'
         response["Content-Length"] = response.body.length.to_s
       end 
     
